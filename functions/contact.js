@@ -4,26 +4,12 @@
 // 2. Deploy with this file in the /functions directory
 // 3. The function will be available at /api/contact
 
-export interface Env {
-  // Add your environment variables here
-  // RESEND_API_KEY: string;
-  // DATABASE_URL: string;
-}
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  budget: string;
-  timeline: string;
-  message: string;
-}
-
-export const onRequestPost: PagesFunction<Env> = async (context) => {
+export const onRequestPost = async (context) => {
   try {
     const { request } = context;
     
     // Parse the form data
-    const formData: ContactFormData = await request.json();
+    const formData = await request.json();
     
     // Validate required fields
     if (!formData.name || !formData.email || !formData.message) {

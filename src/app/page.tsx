@@ -42,102 +42,112 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-        {/* Background with animated gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-background">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(120,119,198,0.3),transparent_70%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,119,198,0.2),transparent_70%)]" />
+      <Section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+        {/* Enhanced background with mesh gradient */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/[0.02] to-background" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(120,119,198,0.15),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.08),transparent_50%)]" />
+          
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]" />
         </div>
         
-        {/* Floating particles */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(6)].map((_, i) => (
+        {/* Dynamic particles */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(8)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-primary/20 rounded-full"
+              className="absolute w-1 h-1 bg-primary/30 rounded-full"
               style={{
-                left: `${20 + (i * 15)}%`,
-                top: `${30 + (i * 10)}%`,
+                left: `${10 + (i * 12)}%`,
+                top: `${20 + (i * 8)}%`,
               }}
               animate={{
-                y: [-20, 20, -20],
-                opacity: [0.3, 0.8, 0.3],
+                y: [-15, 15, -15],
+                x: [-10, 10, -10],
+                opacity: [0.2, 0.6, 0.2],
+                scale: [1, 1.5, 1],
               }}
               transition={{
-                duration: 3 + i,
+                duration: 4 + i * 0.5,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: i * 0.5,
+                delay: i * 0.3,
               }}
             />
           ))}
         </div>
 
-        <div className="relative text-center space-y-12">
+        <div className="relative text-center space-y-8">
+          {/* Status badge with enhanced styling */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex justify-center"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <Badge className="border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm">
+              <div className="flex items-center gap-2 px-2 py-1">
+                <motion.div 
+                  className="w-2 h-2 bg-green-400 rounded-full"
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+                <span className="font-medium">Available for new projects</span>
+              </div>
+            </Badge>
+          </motion.div>
+          
+          {/* Main headline with enhanced typography */}
+          <div className="space-y-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-5xl mx-auto"
             >
-              <Badge 
-                variant="outline" 
-                className="mb-6 border-primary/20 bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  Available for new projects
-                </div>
-              </Badge>
-            </motion.div>
-            
-            <h1 className="heading-1 max-w-5xl mx-auto leading-tight">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="block"
-              >
+              <span className="block leading-tight">
                 Full-Stack Engineer
-              </motion.span>
+              </span>
               <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/60"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 leading-tight"
               >
-                Building Digital Excellence
+                Crafting Digital Excellence
               </motion.span>
-            </h1>
+            </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="body-large max-w-3xl mx-auto text-muted-foreground/90"
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground/80 leading-relaxed"
             >
-              I create scalable web applications, cross-platform mobile experiences, 
-              and motion-rich interfaces that drive business growth and delight users.
+              Transforming ideas into scalable applications with modern technologies 
+              and exceptional user experiences.
             </motion.p>
-          </motion.div>
+          </div>
 
+          {/* Enhanced action buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="flex flex-col sm:flex-row gap-3 justify-center items-center"
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300" asChild>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white shadow-lg hover:shadow-xl border-0 px-8"
+                asChild
+              >
                 <Link href="/projects">
                   View My Work
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -146,26 +156,45 @@ export default function HomePage() {
             </motion.div>
             
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              whileHover={{ scale: 1.03, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <Button size="lg" variant="outline" className="border-2 hover:bg-primary/5 hover:border-primary/50 transition-all duration-300" asChild>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-border/40 hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm px-8"
+                asChild
+              >
                 <Link href="/contact">
-                  Let&apos;s Talk
+                  Let&apos;s Connect
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </motion.div>
           </motion.div>
 
+          {/* Compact stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="pt-12"
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="flex justify-center items-center gap-8 pt-6"
           >
-            <LogoCloud />
+            <div className="text-center">
+              <div className="text-xl font-bold text-primary">50+</div>
+              <div className="text-xs text-muted-foreground">Projects</div>
+            </div>
+            <div className="w-px h-6 bg-border" />
+            <div className="text-center">
+              <div className="text-xl font-bold text-primary">25+</div>
+              <div className="text-xs text-muted-foreground">Happy Clients</div>
+            </div>
+            <div className="w-px h-6 bg-border" />
+            <div className="text-center">
+              <div className="text-xl font-bold text-primary">5+</div>
+              <div className="text-xs text-muted-foreground">Years Experience</div>
+            </div>
           </motion.div>
         </div>
       </Section>

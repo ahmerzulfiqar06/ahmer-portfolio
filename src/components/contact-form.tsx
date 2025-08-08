@@ -48,7 +48,7 @@ export function ContactForm() {
   const watchedBudget = watch("budget");
   const watchedTimeline = watch("timeline");
 
-  const onSubmit = async (data: ContactFormData) => {
+  const onSubmit = async (_data: ContactFormData) => {
     setIsSubmitting(true);
     try {
       // Simulate API call

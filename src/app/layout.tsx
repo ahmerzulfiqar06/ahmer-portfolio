@@ -1,5 +1,4 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
-import { ThemeProvider } from "next-themes";
 import { generateMetadata } from "@/lib/seo";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
@@ -25,18 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${jetbrainsMono.variable} min-h-screen flex flex-col`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Nav />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
+        <Nav />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

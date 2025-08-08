@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/section";
 import { ProjectCard } from "@/components/project-card";
 import { Testimonial } from "@/components/testimonial";
-import { LogoCloud } from "@/components/logo-cloud";
+
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
 

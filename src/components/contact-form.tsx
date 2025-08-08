@@ -48,14 +48,14 @@ export function ContactForm() {
   const watchedBudget = watch("budget");
   const watchedTimeline = watch("timeline");
 
-  const onSubmit = async (_data: ContactFormData) => {
+  const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 2000));
       
       // In a real app, you would send data to your API
-      // Form data would be sent to server here
+      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
       
       setSubmitStatus("success");
       reset();

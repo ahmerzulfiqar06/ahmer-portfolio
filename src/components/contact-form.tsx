@@ -55,11 +55,11 @@ export function ContactForm() {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       
       // In a real app, you would send data to your API
-      console.log("Form data:", data);
+      // Form data would be sent to server here
       
       setSubmitStatus("success");
       reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

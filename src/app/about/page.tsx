@@ -72,7 +72,7 @@ export default function AboutPage() {
                 design, and strategic thinking.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, 
+                When I&apos;m not coding, you&apos;ll find me exploring new technologies, 
                 contributing to open-source projects, or sharing knowledge with the 
                 developer community.
               </p>

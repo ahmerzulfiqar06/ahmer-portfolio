@@ -15,7 +15,7 @@ export default function ProjectsPage() {
 
   // Filter and sort projects
   const filteredProjects = React.useMemo(() => {
-    let filtered = projects.filter((project) => {
+    const filtered = projects.filter((project) => {
       // Type filter
       if (selectedType !== "all" && project.type !== selectedType) {
         return false;

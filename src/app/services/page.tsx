@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Clock, DollarSign } from "lucide-react";
+import { ArrowRight, CheckCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/section";
 import { startupServices, agencyServices } from "@/data/services";

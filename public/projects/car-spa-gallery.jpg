@@ -1,0 +1,94 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient-gallery" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card-gallery" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg-gradient-gallery)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="rgba(255,255,255,0.05)"/>
+  <text x="40" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">Auto Spa</text>
+  <text x="40" y="50" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">Gallery & Testimonials</text>
+  
+  <!-- Filter Tabs -->
+  <rect x="50" y="90" width="80" height="30" rx="15" fill="#3b82f6"/>
+  <text x="90" y="110" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">All</text>
+  
+  <rect x="140" y="90" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+  <text x="190" y="110" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Before/After</text>
+  
+  <rect x="250" y="90" width="80" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+  <text x="290" y="110" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Detail</text>
+  
+  <rect x="340" y="90" width="80" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+  <text x="380" y="110" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)" text-anchor="middle">Ceramic</text>
+  
+  <!-- Gallery Grid -->
+  <!-- Row 1 -->
+  <rect x="50" y="140" width="180" height="120" rx="8" fill="#374151"/>
+  <text x="140" y="195" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Before</text>
+  <text x="140" y="210" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Dirty SUV</text>
+  
+  <rect x="240" y="140" width="180" height="120" rx="8" fill="#1f2937"/>
+  <text x="330" y="195" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">After</text>
+  <text x="330" y="210" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Showroom Clean</text>
+  
+  <rect x="430" y="140" width="180" height="120" rx="8" fill="#4b5563"/>
+  <text x="520" y="195" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">Detail Work</text>
+  <text x="520" y="210" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Interior Clean</text>
+  
+  <rect x="620" y="140" width="130" height="120" rx="8" fill="#374151"/>
+  <text x="685" y="195" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Engine Bay</text>
+  <text x="685" y="210" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Before/After</text>
+  
+  <!-- Row 2 -->
+  <rect x="50" y="270" width="130" height="120" rx="8" fill="#1f2937"/>
+  <text x="115" y="325" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Luxury Sedan</text>
+  <text x="115" y="340" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Premium Detail</text>
+  
+  <rect x="190" y="270" width="180" height="120" rx="8" fill="#374151"/>
+  <text x="280" y="325" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af" text-anchor="middle">Ceramic Coating</text>
+  <text x="280" y="340" font-family="Arial, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Application Process</text>
+  
+  <rect x="380" y="270" width="180" height="120" rx="8" fill="#1f2937"/>
+  <text x="470" y="325" font-family="Arial, sans-serif" font-size="12" fill="#e5e7eb" text-anchor="middle">Sports Car</text>
+  <text x="470" y="340" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Paint Correction</text>
+  
+  <rect x="570" y="270" width="180" height="120" rx="8" fill="#4b5563"/>
+  <text x="660" y="325" font-family="Arial, sans-serif" font-size="12" fill="#d1d5db" text-anchor="middle">Truck Detail</text>
+  <text x="660" y="340" font-family="Arial, sans-serif" font-size="10" fill="#9ca3af" text-anchor="middle">Full Service</text>
+  
+  <!-- Testimonials Section -->
+  <text x="50" y="430" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">What Our Customers Say</text>
+  
+  <!-- Testimonial Cards -->
+  <rect x="50" y="450" width="220" height="120" rx="12" fill="url(#card-gallery)"/>
+  <text x="60" y="470" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24">★★★★★</text>
+  <text x="60" y="490" font-family="Arial, sans-serif" font-size="12" fill="#374751">"Incredible attention to detail!</text>
+  <text x="60" y="505" font-family="Arial, sans-serif" font-size="12" fill="#374751">My car looks brand new."</text>
+  <text x="60" y="530" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1f2937">- Sarah Johnson</text>
+  <text x="60" y="545" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">BMW Owner</text>
+  
+  <rect x="290" y="450" width="220" height="120" rx="12" fill="url(#card-gallery)"/>
+  <text x="300" y="470" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24">★★★★★</text>
+  <text x="300" y="490" font-family="Arial, sans-serif" font-size="12" fill="#374751">"Best car detailing service</text>
+  <text x="300" y="505" font-family="Arial, sans-serif" font-size="12" fill="#374751">in the city. Highly recommend!"</text>
+  <text x="300" y="530" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1f2937">- Mike Rodriguez</text>
+  <text x="300" y="545" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Tesla Model S</text>
+  
+  <rect x="530" y="450" width="220" height="120" rx="12" fill="url(#card-gallery)"/>
+  <text x="540" y="470" font-family="Arial, sans-serif" font-size="14" fill="#fbbf24">★★★★★</text>
+  <text x="540" y="490" font-family="Arial, sans-serif" font-size="12" fill="#374751">"Ceramic coating is amazing.</text>
+  <text x="540" y="505" font-family="Arial, sans-serif" font-size="12" fill="#374751">Worth every penny!"</text>
+  <text x="540" y="530" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1f2937">- Lisa Chen</text>
+  <text x="540" y="545" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Porsche 911</text>
+</svg>

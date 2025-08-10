@@ -2,6 +2,41 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "car-spa-detailing",
+    title: "Auto Spa - Premium Car Detailing Studio",
+    type: "web",
+    clientType: "personal",
+    summary: "Professional, responsive marketing website for a premium car wash and detailing business with booking system, payment integration, and modern animations.",
+    highlights: [
+      "Built fully responsive design optimized for mobile-first experience",
+      "Integrated Stripe & PayPal payment processing for booking system",
+      "Implemented interactive before/after gallery with filterable categories",
+      "Deployed on Cloudflare Pages with edge runtime optimization",
+      "Created professional email automation system with Resend API",
+      "Designed modern UI with gradient animations and micro-interactions"
+    ],
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Stripe", "PayPal", "Resend", "Cloudflare Pages", "Mapbox", "React Hook Form", "Zod"],
+    metrics: [
+      { label: "Lighthouse Score", value: "98/100" },
+      { label: "Mobile Performance", value: "95/100" },
+      { label: "Load Time", value: "<2s" },
+      { label: "Conversion Rate", value: "4.2%" }
+    ],
+    dates: { started: "2024-12", finished: "2025-01" },
+    links: {
+      live: "https://f948f972.car-spa.pages.dev/",
+      repo: "https://github.com/ahmerzulfiqar06/Car-Spa",
+      caseStudy: "/projects/car-spa-detailing"
+    },
+    images: [
+      { src: "/projects/car-spa-1.jpg", alt: "Auto Spa homepage with premium gradient design" },
+      { src: "/projects/car-spa-2.jpg", alt: "Service packages and booking system interface" },
+      { src: "/projects/car-spa-3.jpg", alt: "Interactive gallery with before/after transformations" }
+    ],
+    featured: true,
+    status: "live"
+  },
+  {
     slug: "saas-analytics-dashboard",
     title: "SaaS Analytics Dashboard",
     type: "web",

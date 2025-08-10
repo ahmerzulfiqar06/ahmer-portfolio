@@ -29,9 +29,9 @@ export const projects: Project[] = [
       caseStudy: "/projects/car-spa-detailing"
     },
     images: [
-      { src: "/projects/car-spa-homepage.svg", alt: "Auto Spa homepage with premium gradient design and modern animations" },
-      { src: "/projects/car-spa-services.svg", alt: "Service packages with booking system and pricing" },
-      { src: "/projects/car-spa-gallery.svg", alt: "Interactive before/after gallery with customer testimonials" }
+      { src: "/projects/car-spa-homepage.png", alt: "Auto Spa homepage with premium gradient design and modern animations" },
+      { src: "/projects/car-spa-services.png", alt: "Service packages with booking system and pricing" },
+      { src: "/projects/car-spa-gallery.png", alt: "Interactive before/after gallery with customer testimonials" }
     ],
     featured: true,
     status: "live"

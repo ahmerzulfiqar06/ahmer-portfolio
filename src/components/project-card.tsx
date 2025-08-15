@@ -24,28 +24,33 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     >
       <div className="card overflow-hidden h-full hover:shadow-lg transition-all duration-300">
         {/* Image */}
-        {project.images && project.images[0] && (
-          <div className="relative h-48 overflow-hidden">
+        <div className="relative h-48 overflow-hidden bg-muted">
+          {project.images && project.images[0] ? (
             <Image
               src={project.images[0].src}
               alt={project.images[0].alt}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-300"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={(e) => console.log(`Image failed to load: ${project.images?.[0]?.src}`)}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            
-            {/* Status Badge */}
-            <div className="absolute top-4 left-4">
-              <Badge
-                variant={project.status === "live" ? "default" : "secondary"}
-                className="text-xs"
-              >
-                {project.status === "live" ? "Live" : project.status === "wip" ? "In Progress" : "Case Study"}
-              </Badge>
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+              <span className="text-sm">No image available</span>
             </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          
+          {/* Status Badge */}
+          <div className="absolute top-4 left-4">
+            <Badge
+              variant={project.status === "live" ? "default" : "secondary"}
+              className="text-xs"
+            >
+              {project.status === "live" ? "Live" : project.status === "wip" ? "In Progress" : "Case Study"}
+            </Badge>
           </div>
-        )}
+        </div>
 
         <div className="card-content space-y-4">
           {/* Header */}

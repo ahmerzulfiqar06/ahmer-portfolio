@@ -308,6 +308,12 @@ export default function HomePage() {
             A selection of recent projects that showcase my expertise in 
             full-stack development and problem-solving.
           </p>
+          {/* DEBUG INFO */}
+          <div className="mt-4 p-4 bg-yellow-100 text-black rounded">
+            <p>Debug: Total projects: {projects.length}</p>
+            <p>First project: {projects[0]?.title || "No projects found"}</p>
+            <p>Featured count: {projects.filter(p => p.featured).length}</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

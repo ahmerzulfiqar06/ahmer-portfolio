@@ -2,41 +2,6 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "dental-management-system",
-    title: "Professional Dental Appointment Management System",
-    type: "web",
-    clientType: "personal",
-    summary: "Complete dental practice management platform with patient booking, secure authentication, admin dashboard, and role-based access control.",
-    highlights: [
-      "Built full-stack application with React frontend and Node.js backend",
-      "Implemented secure JWT authentication with role-based access control",
-      "Created comprehensive admin dashboard for appointment management",
-      "Designed patient portal with booking and history features",
-      "Integrated PostgreSQL database with TypeORM for robust data management",
-      "Deployed on Railway with Cloudflare Pages for optimal performance"
-    ],
-    tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "TypeORM", "JWT", "bcrypt", "Railway", "Cloudflare Pages", "Joi", "Helmet.js"],
-    metrics: [
-      { label: "Security Score", value: "A+" },
-      { label: "Load Time", value: "<2s" },
-      { label: "Uptime", value: "99.9%" },
-      { label: "Database Performance", value: "Optimized" }
-    ],
-    dates: { started: "2024-12", finished: "2025-01" },
-    links: {
-      live: "https://dental-manage-system.pages.dev/",
-      repo: "https://github.com/ahmerzulfiqar06/dental-manage-system",
-      caseStudy: "/projects/dental-management-system"
-    },
-    images: [
-      { src: "/projects/dental-homepage.png", alt: "Dental management system homepage with modern design" },
-      { src: "/projects/dental-dashboard.png", alt: "Admin dashboard showing appointment management interface" },
-      { src: "/projects/dental-booking.png", alt: "Patient booking system with appointment scheduling" }
-    ],
-    featured: true,
-    status: "live"
-  },
-  {
     slug: "car-spa-detailing",
     title: "Auto Spa - Premium Car Detailing Studio",
     type: "web",
@@ -67,6 +32,41 @@ export const projects: Project[] = [
       { src: "/projects/car-spa-homepage.png", alt: "Auto Spa homepage with premium gradient design and modern animations" },
       { src: "/projects/car-spa-services.png", alt: "Service packages with booking system and pricing" },
       { src: "/projects/car-spa-gallery.png", alt: "Interactive before/after gallery with customer testimonials" }
+    ],
+    featured: true,
+    status: "live"
+  },
+  {
+    slug: "dental-management-system",
+    title: "Professional Dental Appointment Management System",
+    type: "web",
+    clientType: "personal",
+    summary: "Complete dental practice management platform with patient booking, secure authentication, admin dashboard, and role-based access control.",
+    highlights: [
+      "Built full-stack application with React frontend and Node.js backend",
+      "Implemented secure JWT authentication with role-based access control",
+      "Created comprehensive admin dashboard for appointment management",
+      "Designed patient portal with booking and history features",
+      "Integrated PostgreSQL database with TypeORM for robust data management",
+      "Deployed on Railway with Cloudflare Pages for optimal performance"
+    ],
+    tech: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "TypeORM", "JWT", "bcrypt", "Railway", "Cloudflare Pages", "Joi", "Helmet.js"],
+    metrics: [
+      { label: "Security Score", value: "A+" },
+      { label: "Load Time", value: "<2s" },
+      { label: "Uptime", value: "99.9%" },
+      { label: "Database Performance", value: "Optimized" }
+    ],
+    dates: { started: "2024-12", finished: "2025-01" },
+    links: {
+      live: "https://dental-manage-system.pages.dev/",
+      repo: "https://github.com/ahmerzulfiqar06/dental-manage-system",
+      caseStudy: "/projects/dental-management-system"
+    },
+    images: [
+      { src: "/projects/dental-homepage.png", alt: "Dental management system homepage with modern design" },
+      { src: "/projects/dental-dashboard.png", alt: "Admin dashboard showing appointment management interface" },
+      { src: "/projects/dental-booking.png", alt: "Patient booking system with appointment scheduling" }
     ],
     featured: true,
     status: "live"

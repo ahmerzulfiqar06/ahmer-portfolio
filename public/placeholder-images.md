@@ -9,6 +9,9 @@ This file documents the placeholder images needed for the portfolio. Replace the
 - `/og-image.jpg` (1200x630px for social sharing)
 
 ### Project Screenshots
+- `/projects/dental-homepage.png` - Dental management system homepage with modern design
+- `/projects/dental-dashboard.png` - Admin dashboard showing appointment management interface
+- `/projects/dental-booking.png` - Patient booking system with appointment scheduling
 - `/projects/saas-dashboard-1.jpg` - Dashboard overview
 - `/projects/saas-dashboard-2.jpg` - Chart builder interface
 - `/projects/ecommerce-1.jpg` - Product catalog

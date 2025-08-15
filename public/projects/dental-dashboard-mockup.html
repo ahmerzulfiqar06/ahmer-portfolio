@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #1f2937;
+            line-height: 1.5;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: 64px 1fr;
+            height: 100vh;
+        }
+        
+        .header {
+            grid-column: 1 / -1;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .search-bar {
+            flex: 1;
+            max-width: 400px;
+            margin: 0 40px;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 8px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #f9fafb;
+            font-size: 14px;
+        }
+        
+        .user-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .notification {
+            position: relative;
+            padding: 8px;
+            border-radius: 6px;
+            background: #f3f4f6;
+        }
+        
+        .notification::after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            width: 8px;
+            height: 8px;
+            background: #dc2626;
+            border-radius: 50%;
+        }
+        
+        .sidebar {
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            padding: 24px 0;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            text-decoration: none;
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .nav-item.active {
+            background: #2563eb;
+            color: white;
+            border-right: 3px solid #1d4ed8;
+        }
+        
+        .nav-item:hover:not(.active) {
+            background: #f3f4f6;
+        }
+        
+        .main-content {
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .stat-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        
+        .stat-change {
+            font-size: 12px;
+            color: #059669;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+        }
+        
+        .schedule-card, .activity-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .card-header {
+            padding: 20px 24px 16px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .card-content {
+            padding: 16px 24px 24px;
+        }
+        
+        .appointment-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .appointment-item:last-child {
+            border-bottom: none;
+        }
+        
+        .appointment-info h4 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .appointment-info p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        
+        .appointment-status {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status-current {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        
+        .status-upcoming {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+        
+        .status-available {
+            background: #d1fae5;
+            color: #059669;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        
+        .activity-new {
+            background: #d1fae5;
+            color: #059669;
+        }
+        
+        .activity-payment {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        
+        .activity-update {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+        
+        .activity-content h5 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .activity-content p {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        
+        .activity-time {
+            font-size: 11px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+        
+        .quick-actions {
+            position: fixed;
+            top: 50%;
+            right: 24px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .quick-action {
+            width: 56px;
+            height: 56px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        
+        .quick-action:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo">
+                🏥 DentalCare Pro
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search patients, appointments...">
+            </div>
+            <div class="user-section">
+                <div class="notification">🔔</div>
+                <div>👤 Dr. Smith</div>
+            </div>
+        </header>
+        
+        <nav class="sidebar">
+            <a href="#" class="nav-item active">📊 Dashboard</a>
+            <a href="#" class="nav-item">📅 Appointments</a>
+            <a href="#" class="nav-item">👥 Patients</a>
+            <a href="#" class="nav-item">🏥 Services</a>
+            <a href="#" class="nav-item">📈 Reports</a>
+            <a href="#" class="nav-item">⚙️ Settings</a>
+        </nav>
+        
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-label">Today's Appointments</div>
+                    <div class="stat-change">+3 from yesterday</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-label">Total Patients</div>
+                    <div class="stat-change">+12 this month</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value">$45,230</div>
+                    <div class="stat-label">Monthly Revenue</div>
+                    <div class="stat-change">+8.5% this month</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-value">7</div>
+                    <div class="stat-label">Pending Confirmations</div>
+                    <div class="stat-change">2 urgent</div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="schedule-card">
+                    <div class="card-header">Today's Schedule</div>
+                    <div class="card-content">
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h4>Mike Chen</h4>
+                                <p>9:00 AM • Consultation • Room 1</p>
+                            </div>
+                            <span class="appointment-status status-upcoming">Upcoming</span>
+                        </div>
+                        
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h4>Emma Davis</h4>
+                                <p>10:30 AM • Filling • Room 2</p>
+                            </div>
+                            <span class="appointment-status status-upcoming">Upcoming</span>
+                        </div>
+                        
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>2:30 PM • Cleaning • Room 1</p>
+                            </div>
+                            <span class="appointment-status status-current">Current</span>
+                        </div>
+                        
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h4>Emergency Slot</h4>
+                                <p>3:45 PM • Available • Room 3</p>
+                            </div>
+                            <span class="appointment-status status-available">Available</span>
+                        </div>
+                        
+                        <div class="appointment-item">
+                            <div class="appointment-info">
+                                <h4>Robert Kim</h4>
+                                <p>4:15 PM • Checkup • Room 2</p>
+                            </div>
+                            <span class="appointment-status status-upcoming">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="card-header">Recent Activity</div>
+                    <div class="card-content">
+                        <div class="activity-item">
+                            <div class="activity-icon activity-new">+</div>
+                            <div class="activity-content">
+                                <h5>New appointment booked</h5>
+                                <p>Mike Chen - Tomorrow 9:00 AM</p>
+                                <div class="activity-time">2 minutes ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon activity-payment">$</div>
+                            <div class="activity-content">
+                                <h5>Payment received</h5>
+                                <p>Emma Davis - $250</p>
+                                <div class="activity-time">15 minutes ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon activity-update">i</div>
+                            <div class="activity-content">
+                                <h5>Insurance updated</h5>
+                                <p>Robert Kim - Blue Cross</p>
+                                <div class="activity-time">1 hour ago</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon activity-new">📧</div>
+                            <div class="activity-content">
+                                <h5>Reminder sent</h5>
+                                <p>Sarah Johnson - Tomorrow's appointment</p>
+                                <div class="activity-time">2 hours ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <div class="quick-actions">
+            <a href="#" class="quick-action" title="New Appointment">+</a>
+            <a href="#" class="quick-action" title="Add Patient">👤</a>
+            <a href="#" class="quick-action" title="Send Reminder">📧</a>
+        </div>
+    </div>
+</body>
+</html>

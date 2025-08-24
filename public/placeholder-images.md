@@ -12,6 +12,9 @@ This file documents the placeholder images needed for the portfolio. Replace the
 - `/projects/dental-homepage.png` - Dental management system homepage with modern design
 - `/projects/dental-dashboard.png` - Admin dashboard showing appointment management interface
 - `/projects/dental-booking.png` - Patient booking system with appointment scheduling
+- `/projects/salon-homepage.png` - CLIPPERZ salon homepage with modern design and booking system
+- `/projects/salon-services.png` - Services page showing haircut packages and pricing
+- `/projects/salon-booking.png` - Online booking system with calendar integration
 - `/projects/saas-dashboard-1.jpg` - Dashboard overview
 - `/projects/saas-dashboard-2.jpg` - Chart builder interface
 - `/projects/ecommerce-1.jpg` - Product catalog

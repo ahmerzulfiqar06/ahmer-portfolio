@@ -72,6 +72,41 @@ export const projects: Project[] = [
     status: "live"
   },
   {
+    slug: "men-salon-website",
+    title: "CLIPPERZ - Professional Men's Salon Website",
+    type: "web",
+    clientType: "personal",
+    summary: "Modern, responsive website for a professional men's salon and barber shop with online booking system, service listings, and customer management features.",
+    highlights: [
+      "Built responsive design with Next.js 14 and TypeScript for optimal performance",
+      "Integrated Resend API for automated email booking confirmations",
+      "Designed modern UI with Framer Motion animations and accessibility features",
+      "Implemented comprehensive booking system with calendar integration",
+      "Created service management with pricing and duration tracking",
+      "Optimized for mobile-first experience with touch-friendly interfaces"
+    ],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend API", "React Hook Form", "Zod", "Cloudflare Pages"],
+    metrics: [
+      { label: "Mobile Performance", value: "98/100" },
+      { label: "Accessibility Score", value: "A+" },
+      { label: "Load Time", value: "<1.5s" },
+      { label: "SEO Optimization", value: "95/100" }
+    ],
+    dates: { started: "2024-11", finished: "2024-12" },
+    links: {
+      live: "https://4c5e837b.men-salon.pages.dev/",
+      repo: "https://github.com/ahmerzulfiqar06/Men-Salon",
+      caseStudy: "/projects/men-salon-website"
+    },
+    images: [
+      { src: "/projects/salon-homepage.png", alt: "CLIPPERZ salon homepage with modern design and booking system" },
+      { src: "/projects/salon-services.png", alt: "Services page showing haircut packages and pricing" },
+      { src: "/projects/salon-booking.png", alt: "Online booking system with calendar integration" }
+    ],
+    featured: true,
+    status: "live"
+  },
+  {
     slug: "saas-analytics-dashboard",
     title: "SaaS Analytics Dashboard",
     type: "web",

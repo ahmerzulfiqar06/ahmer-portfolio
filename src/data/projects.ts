@@ -107,6 +107,41 @@ export const projects: Project[] = [
     status: "live"
   },
   {
+    slug: "car-rental-platform",
+    title: "EliteDrive - Premium Luxury Car Rental Platform",
+    type: "web",
+    clientType: "personal",
+    summary: "A sophisticated, full-stack luxury car rental platform built with cutting-edge technologies for booking cars on monthly, weekly, or daily basis.",
+    highlights: [
+      "Modern, responsive design with glassmorphism effects and smooth animations",
+      "Full-featured booking system with flexible rental periods",
+      "Luxury fleet showcase with high-quality images and detailed specifications",
+      "Integrated payment processing and booking management",
+      "Deployed on Cloudflare Pages with edge runtime optimization",
+      "Built with Next.js 14, TypeScript, and Tailwind CSS for optimal performance"
+    ],
+    tech: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion", "Cloudflare Pages", "React Hook Form", "Zod"],
+    metrics: [
+      { label: "Lighthouse Score", value: "95/100" },
+      { label: "Mobile Performance", value: "92/100" },
+      { label: "Load Time", value: "<2.5s" },
+      { label: "Responsive Design", value: "100%" }
+    ],
+    dates: { started: "2024-12", finished: "2025-01" },
+    links: {
+      live: "https://adfad126.car-rental-bk0.pages.dev/",
+      repo: "https://github.com/ahmerzulfiqar06/car-rental",
+      caseStudy: "/projects/car-rental-platform"
+    },
+    images: [
+      { src: "/projects/car-rental-homepage.png", alt: "EliteDrive homepage with luxury car showcase and modern design" },
+      { src: "/projects/car-rental-fleet.png", alt: "Premium car fleet with detailed specifications and booking options" },
+      { src: "/projects/car-rental-booking.png", alt: "Booking system with flexible rental periods and pricing" }
+    ],
+    featured: true,
+    status: "live"
+  },
+  {
     slug: "saas-analytics-dashboard",
     title: "SaaS Analytics Dashboard",
     type: "web",

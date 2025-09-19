@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { Project } from "@/types";
 
 const siteConfig = {
-  name: "AZ",
-  title: "AZ - Full-Stack Development & Software Engineering",
+  name: "AhmerZ",
+  title: "AhmerZ - Full-Stack Development & Software Engineering",
   description: "We specialize in modern web applications, mobile apps, and motion design. We build production-ready solutions for startups and agencies using Next.js, React Native, and cutting-edge technologies.",
   url: "https://ahmerzulfiqar.dev",
   ogImage: "https://ahmerzulfiqar.dev/og-image.jpg",
   author: {
-    name: "AZ",
+    name: "AhmerZ",
     email: "hello@ahmerzulfiqar.dev",
     twitter: "@ahmerzulfiqar",
     github: "https://github.com/ahmerzulfiqar",

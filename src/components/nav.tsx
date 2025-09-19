@@ -22,6 +22,15 @@ export function Nav() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
+  // Function to check if a navigation item is active
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    // For other pages, check if pathname starts with the href
+    return pathname.startsWith(href);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between">
@@ -36,13 +45,13 @@ export function Nav() {
               href={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary relative",
-                pathname === item.href
+                isActive(item.href)
                   ? "text-foreground"
                   : "text-muted-foreground"
               )}
             >
               {item.name}
-              {pathname === item.href && (
+              {isActive(item.href) && (
                 <motion.div
                   layoutId="activeTab"
                   className="absolute -bottom-6 left-0 right-0 h-0.5 bg-primary"
@@ -98,7 +107,7 @@ export function Nav() {
                   href={item.href}
                   className={cn(
                     "block text-lg font-medium transition-colors",
-                    pathname === item.href
+                    isActive(item.href)
                       ? "text-primary"
                       : "text-muted-foreground hover:text-foreground"
                   )}

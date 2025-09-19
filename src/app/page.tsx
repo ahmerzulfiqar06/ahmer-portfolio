@@ -309,39 +309,9 @@ export default function HomePage() {
         </motion.div>
       </Section>
 
-      {/* Featured Projects */}
-      <Section className="bg-muted/30">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
-          <p className="text-lg max-w-2xl mx-auto">
-            A selection of recent projects that showcase our expertise in
-            full-stack development and problem-solving.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard
-              key={project.slug}
-              project={project}
-              index={index}
-            />
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Button variant="outline" size="lg" asChild>
-            <Link href="/projects">
-              View All Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </Section>
-
-      {/* About Developer Section */}
+      {/* What We Offer Section */}
       <Section className="bg-gradient-to-br from-background via-primary/[0.02] to-background">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Developer Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -356,7 +326,6 @@ export default function HomePage() {
               {/* Main photo container */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-blue-500/10 p-1">
                 <div className="relative h-96 lg:h-[500px] w-full overflow-hidden rounded-xl bg-muted">
-                  {/* Replace with your actual photo */}
                   <Image
                     src="/your-photo.jpg"
                     alt="AhmerZ - Full-Stack Developer"
@@ -407,7 +376,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+                <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
                   WHAT WE OFFER
                 </Badge>
               </motion.div>
@@ -416,15 +385,15 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-3xl lg:text-4xl font-black leading-tight tracking-tight"
+                className="text-3xl lg:text-4xl font-black leading-tight"
               >
                 <div className="text-foreground font-extrabold">WEBSITES & MOBILE APPS</div>
                 <div className="text-foreground font-extrabold">STARTING AT</div>
                 <div className="mt-2">
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
                     $0 DOWN
-                  </span>{" "}
-                  <span className="text-foreground font-extrabold">AND</span>{" "}
+                  </span>
+                  <span className="text-foreground font-extrabold mx-2">AND</span>
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
                     $150/MONTH
                   </span>
@@ -439,8 +408,7 @@ export default function HomePage() {
               >
                 We offer $0 down for professional websites and mobile applications. From standard 5-page business
                 websites to complex mobile apps with custom backends - we provide flexible pricing based on your
-                project scope. Our packages include design, development, deployment, hosting, unlimited revisions,
-                24/7 support, and lifetime updates.
+                project scope.
               </motion.p>
             </div>
 
@@ -449,38 +417,38 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
                 {
                   icon: "🔒",
                   title: "100% SECURE",
-                  description: "Enterprise-grade security for websites and mobile apps with SSL certificates and best practices."
+                  description: "Enterprise-grade security with SSL certificates and best practices."
                 },
                 {
                   icon: "🎨",
                   title: "CUSTOM DESIGNED",
-                  description: "Unique designs for web and mobile platforms crafted to match your brand perfectly."
+                  description: "Unique designs crafted to match your brand perfectly."
                 },
                 {
                   icon: "⚡",
                   title: "LIGHTNING FAST",
-                  description: "Optimized websites and native mobile apps with perfect performance scores and instant loading."
+                  description: "Optimized for perfect performance scores and instant loading."
                 },
                 {
                   icon: "💰",
                   title: "MONEY BACK GUARANTEE",
-                  description: "Risk-free development for both web and mobile projects. We deliver or you don't pay."
+                  description: "Risk-free development. We deliver or you don't pay."
                 },
                 {
                   icon: "📱",
                   title: "CROSS-PLATFORM APPS",
-                  description: "Flutter & React Native apps that work seamlessly on iOS and Android from a single codebase."
+                  description: "Flutter & React Native apps for iOS and Android."
                 },
                 {
                   icon: "📈",
                   title: "FULL-STACK SOLUTIONS",
-                  description: "Complete web and mobile solutions with custom backends, APIs, and database architecture."
+                  description: "Complete solutions with backends, APIs, and databases."
                 }
               ].map((feature, index) => (
                 <motion.div
@@ -488,15 +456,15 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                  className="space-y-3"
+                  className="space-y-2"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="text-2xl">{feature.icon}</div>
-                    <h3 className="font-bold text-foreground text-sm tracking-wide">
+                    <div className="text-xl">{feature.icon}</div>
+                    <h3 className="font-bold text-foreground text-sm">
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed pl-11">
+                  <p className="text-muted-foreground text-sm leading-relaxed pl-9">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -512,7 +480,7 @@ export default function HomePage() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold tracking-wide"
+                className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold"
                 asChild
               >
                 <Link href="/contact">
@@ -522,6 +490,36 @@ export default function HomePage() {
               </Button>
             </motion.div>
           </motion.div>
+        </div>
+      </Section>
+
+      {/* Featured Projects */}
+      <Section className="bg-muted/30">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Work</h2>
+          <p className="text-lg max-w-2xl mx-auto">
+            A selection of recent projects that showcase our expertise in
+            full-stack development and problem-solving.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {featuredProjects.map((project, index) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              index={index}
+            />
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/projects">
+              View All Projects
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Section>
 
@@ -547,18 +545,18 @@ export default function HomePage() {
       </Section>
 
       {/* Tech Stack */}
-      <Section>
-        <div className="text-center mb-16">
+      <Section className="bg-gradient-to-b from-background to-muted/20">
+        <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
               TECHNOLOGIES WE MASTER
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Cutting-Edge Tech Stack</h2>
-            <p className="text-lg max-w-3xl mx-auto text-muted-foreground">
+            <p className="text-lg max-w-3xl mx-auto text-muted-foreground leading-relaxed">
               From modern web frameworks to cross-platform mobile development, we leverage
               the latest technologies to build scalable, maintainable, and high-performance
               applications that drive business growth.
@@ -567,7 +565,7 @@ export default function HomePage() {
         </div>
 
         {/* Categorized Tech Stack */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {/* Frontend & Mobile */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -575,8 +573,8 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center"
           >
-            <h3 className="text-xl font-semibold mb-6 text-foreground">Frontend & Mobile Development</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <h3 className="text-xl font-semibold mb-8 text-foreground">Frontend & Mobile Development</h3>
+            <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
               {["React", "Next.js", "TypeScript", "React Native", "Flutter", "Tailwind CSS", "Framer Motion"].map((tech, index) => (
                 <motion.div
                   key={tech}
@@ -586,7 +584,7 @@ export default function HomePage() {
                 >
                   <Badge
                     variant="secondary"
-                    className="text-sm py-3 px-5 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-blue-200 dark:border-blue-800 hover:scale-105 transition-transform cursor-default"
+                    className="text-sm py-3 px-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-blue-200 dark:border-blue-800 hover:scale-105 transition-all duration-200 cursor-default font-medium"
                   >
                     {tech}
                   </Badge>
@@ -602,8 +600,8 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center"
           >
-            <h3 className="text-xl font-semibold mb-6 text-foreground">Backend & Programming Languages</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <h3 className="text-xl font-semibold mb-8 text-foreground">Backend & Programming Languages</h3>
+            <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
               {["Node.js", "Python", "Django", "FastAPI", "Express.js"].map((tech, index) => (
                 <motion.div
                   key={tech}
@@ -613,7 +611,7 @@ export default function HomePage() {
                 >
                   <Badge
                     variant="secondary"
-                    className="text-sm py-3 px-5 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-950/30 dark:to-teal-950/30 border-green-200 dark:border-green-800 hover:scale-105 transition-transform cursor-default"
+                    className="text-sm py-3 px-6 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-950/30 dark:to-teal-950/30 border-green-200 dark:border-green-800 hover:scale-105 transition-all duration-200 cursor-default font-medium"
                   >
                     {tech}
                   </Badge>
@@ -629,8 +627,8 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center"
           >
-            <h3 className="text-xl font-semibold mb-6 text-foreground">Databases & Cloud Infrastructure</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <h3 className="text-xl font-semibold mb-8 text-foreground">Databases & Cloud Infrastructure</h3>
+            <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
               {["PostgreSQL", "MongoDB", "Firebase", "AWS", "Vercel", "Docker"].map((tech, index) => (
                 <motion.div
                   key={tech}
@@ -640,7 +638,7 @@ export default function HomePage() {
                 >
                   <Badge
                     variant="secondary"
-                    className="text-sm py-3 px-5 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/30 dark:to-red-950/30 border-orange-200 dark:border-orange-800 hover:scale-105 transition-transform cursor-default"
+                    className="text-sm py-3 px-6 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/30 dark:to-red-950/30 border-orange-200 dark:border-orange-800 hover:scale-105 transition-all duration-200 cursor-default font-medium"
                   >
                     {tech}
                   </Badge>
@@ -656,8 +654,8 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-center"
           >
-            <h3 className="text-xl font-semibold mb-6 text-foreground">Development Tools & APIs</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <h3 className="text-xl font-semibold mb-8 text-foreground">Development Tools & APIs</h3>
+            <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
               {["Prisma", "GraphQL", "REST APIs", "Git", "Figma"].map((tech, index) => (
                 <motion.div
                   key={tech}
@@ -667,7 +665,7 @@ export default function HomePage() {
                 >
                   <Badge
                     variant="secondary"
-                    className="text-sm py-3 px-5 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-purple-200 dark:border-purple-800 hover:scale-105 transition-transform cursor-default"
+                    className="text-sm py-3 px-6 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-purple-200 dark:border-purple-800 hover:scale-105 transition-all duration-200 cursor-default font-medium"
                   >
                     {tech}
                   </Badge>
@@ -682,13 +680,13 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Need a technology not listed here? We&apos;re always learning and adapting to new tools
             that can deliver better results for your project.
           </p>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" className="border-2 hover:bg-primary/5 hover:border-primary/50" asChild>
             <Link href="/services">
               Explore Our Services
               <ArrowRight className="ml-2 h-4 w-4" />

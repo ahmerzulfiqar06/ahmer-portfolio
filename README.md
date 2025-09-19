@@ -309,8 +309,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Ahmer Zulfiqar**
-- 🌐 Website: [ahmerzulfiqar.dev](https://ahmerzulfiqar.dev)
-- 📧 Email: [hello@ahmerzulfiqar.dev](mailto:hello@ahmerzulfiqar.dev)
+- 🌐 Website: [ahmerz.com](https:/ahmerz.com)
+- 📧 Email: [hi@ahmerz.com](mailto:hi@ahmerz.com)
 - 💼 LinkedIn: [linkedin.com/in/ahmerzulfiqar](https://linkedin.com/in/ahmerzulfiqar)
 - 🐙 GitHub: [github.com/ahmerzulfiqar](https://github.com/ahmerzulfiqar)
 

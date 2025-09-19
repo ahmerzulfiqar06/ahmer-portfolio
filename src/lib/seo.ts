@@ -9,7 +9,7 @@ const siteConfig = {
   ogImage: "https://ahmerzulfiqar.dev/og-image.jpg",
   author: {
     name: "AhmerZ",
-    email: "hello@ahmerzulfiqar.dev",
+    email: "hi@ahmerz.com",
     twitter: "@ahmerzulfiqar",
     github: "https://github.com/ahmerzulfiqar",
     linkedin: "https://linkedin.com/in/ahmerzulfiqar",

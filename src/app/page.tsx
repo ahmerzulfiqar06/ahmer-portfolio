@@ -80,16 +80,15 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
-          {/* Left side content */}
-          <div className="relative z-10 space-y-6 text-left">
+        <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 min-h-[70vh] items-start">
+          {/* Left side content - Headline and Description */}
+          <div className="relative z-10 space-y-4 text-left lg:col-span-1">
             {/* Main headline with enhanced typography */}
-          <div className="space-y-4">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-3xl"
             >
               <span className="block leading-tight">
                 Full-Stack Engineer
@@ -103,82 +102,84 @@ export default function HomePage() {
                 Crafting Digital Excellence
               </motion.span>
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-lg md:text-xl max-w-2xl text-muted-foreground/80 leading-relaxed"
             >
-              Transforming ideas into scalable applications with modern technologies 
+              Transforming ideas into scalable applications with modern technologies
               and exceptional user experiences.
             </motion.p>
           </div>
 
+          {/* Center - Buttons and Stats */}
+          <div className="relative z-10 flex flex-col justify-center items-center space-y-8 lg:col-span-1">
             {/* Enhanced action buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-            <motion.div
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            >
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white shadow-lg hover:shadow-xl border-0 px-8"
-                asChild
+              <motion.div
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
-                <Link href="/projects">
-                  View My Work
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </motion.div>
-            
-            <motion.div
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            >
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-border/40 hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm px-8"
-                asChild
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-white shadow-lg hover:shadow-xl border-0 px-8"
+                  asChild
+                >
+                  <Link href="/projects">
+                    View My Work
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
-                <Link href="/contact">
-                  Let&apos;s Connect
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-border/40 hover:border-primary/40 hover:bg-primary/5 backdrop-blur-sm px-8"
+                  asChild
+                >
+                  <Link href="/contact">
+                    Let&apos;s Connect
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
             </motion.div>
-          </motion.div>
 
             {/* Compact stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
-              className="flex justify-center items-center gap-8 pt-6"
+              className="flex justify-center items-center gap-8"
             >
-            <div className="text-center">
-              <div className="text-xl font-bold text-primary">50+</div>
-              <div className="text-xs text-muted-foreground">Projects</div>
-            </div>
-            <div className="w-px h-6 bg-border" />
-            <div className="text-center">
-              <div className="text-xl font-bold text-primary">25+</div>
-              <div className="text-xs text-muted-foreground">Happy Clients</div>
-            </div>
-            <div className="w-px h-6 bg-border" />
-            <div className="text-center">
-              <div className="text-xl font-bold text-primary">5+</div>
-              <div className="text-xs text-muted-foreground">Years Experience</div>
-            </div>
+              <div className="text-center">
+                <div className="text-xl font-bold text-primary">50+</div>
+                <div className="text-xs text-muted-foreground">Projects</div>
+              </div>
+              <div className="w-px h-6 bg-border" />
+              <div className="text-center">
+                <div className="text-xl font-bold text-primary">25+</div>
+                <div className="text-xs text-muted-foreground">Happy Clients</div>
+              </div>
+              <div className="w-px h-6 bg-border" />
+              <div className="text-center">
+                <div className="text-xl font-bold text-primary">5+</div>
+                <div className="text-xs text-muted-foreground">Years Experience</div>
+              </div>
             </motion.div>
           </div>
 
@@ -187,7 +188,7 @@ export default function HomePage() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative z-10 flex justify-center lg:justify-end"
+            className="relative z-10 flex justify-center lg:justify-end lg:col-span-1"
           >
             <div className="relative">
               <HeroAnimation />

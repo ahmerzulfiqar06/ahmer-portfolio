@@ -80,14 +80,16 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative text-center space-y-8">
-          {/* Status badge with enhanced styling */}
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex justify-center"
-          >
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
+          {/* Left side content */}
+          <div className="relative z-10 space-y-8 text-left">
+            {/* Status badge with enhanced styling */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex justify-start"
+            >
             <Badge className="border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm">
               <div className="flex items-center gap-2 px-2 py-1">
                 <motion.div 
@@ -106,7 +108,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-5xl mx-auto"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
             >
               <span className="block leading-tight">
                 Full-Stack Engineer
@@ -125,20 +127,20 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground/80 leading-relaxed"
+              className="text-lg md:text-xl max-w-2xl text-muted-foreground/80 leading-relaxed"
             >
               Transforming ideas into scalable applications with modern technologies 
               and exceptional user experiences.
             </motion.p>
           </div>
 
-          {/* Enhanced action buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center items-center"
-          >
+            {/* Enhanced action buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-3 justify-start items-start"
+            >
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -175,13 +177,13 @@ export default function HomePage() {
             </motion.div>
           </motion.div>
 
-          {/* Compact stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="flex justify-center items-center gap-8 pt-6"
-          >
+            {/* Compact stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              className="flex justify-start items-center gap-8 pt-6"
+            >
             <div className="text-center">
               <div className="text-xl font-bold text-primary">50+</div>
               <div className="text-xs text-muted-foreground">Projects</div>
@@ -192,32 +194,27 @@ export default function HomePage() {
               <div className="text-xs text-muted-foreground">Happy Clients</div>
             </div>
             <div className="w-px h-6 bg-border" />
-            <div className="text-center">
+            <div className="text-left">
               <div className="text-xl font-bold text-primary">5+</div>
               <div className="text-xs text-muted-foreground">Years Experience</div>
+            </div>
+            </motion.div>
+          </div>
+
+          {/* Right side animation */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="relative z-10 flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              <HeroAnimation />
             </div>
           </motion.div>
         </div>
       </Section>
 
-      {/* Hero Animation Section */}
-      <Section className="py-16 md:py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
-            Crafting Digital Experiences
-          </h2>
-          <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
-            From concept to deployment, I build scalable applications that combine
-            cutting-edge technology with intuitive design.
-          </p>
-          <HeroAnimation />
-        </motion.div>
-      </Section>
 
       {/* Services */}
       <Section className="bg-gradient-to-b from-background to-muted/30">

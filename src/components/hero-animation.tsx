@@ -5,7 +5,7 @@ import { Monitor, Smartphone, Code, Zap, Database } from "lucide-react";
 
 export function HeroAnimation() {
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
+    <div className="relative w-full max-w-3xl mx-auto scale-90 lg:scale-100">
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Code icons */}
@@ -85,7 +85,7 @@ export function HeroAnimation() {
       </div>
 
       {/* Main devices */}
-      <div className="relative flex items-center justify-center gap-8 md:gap-12">
+      <div className="relative flex items-center justify-center gap-4 md:gap-8 lg:gap-12">
         {/* Laptop Mockup */}
         <motion.div
           initial={{ x: -100, opacity: 0, rotateY: -15 }}
@@ -96,7 +96,7 @@ export function HeroAnimation() {
           <div className="relative">
             {/* Laptop screen */}
             <motion.div
-              className="w-48 md:w-64 h-32 md:h-40 bg-gradient-to-br from-slate-800 to-slate-900 rounded-t-lg border-2 border-slate-700 relative overflow-hidden"
+              className="w-40 md:w-56 lg:w-64 h-28 md:h-36 lg:h-40 bg-gradient-to-br from-slate-800 to-slate-900 rounded-t-lg border-2 border-slate-700 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
             >
@@ -132,7 +132,7 @@ export function HeroAnimation() {
             </motion.div>
 
             {/* Laptop base */}
-            <div className="w-48 md:w-64 h-3 bg-gradient-to-r from-slate-700 to-slate-800 rounded-b-lg"></div>
+            <div className="w-40 md:w-56 lg:w-64 h-3 bg-gradient-to-r from-slate-700 to-slate-800 rounded-b-lg"></div>
           </div>
 
           {/* Floating code snippets */}
@@ -172,7 +172,7 @@ export function HeroAnimation() {
           <div className="relative">
             {/* Phone screen */}
             <motion.div
-              className="w-24 md:w-32 h-48 md:h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-slate-700 relative overflow-hidden"
+              className="w-20 md:w-28 lg:w-32 h-40 md:h-56 lg:h-64 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-slate-700 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
             >

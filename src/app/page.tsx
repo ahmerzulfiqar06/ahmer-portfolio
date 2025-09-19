@@ -358,96 +358,127 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Right side - Company Details */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <div className="space-y-4">
+              {/* Right side - Services & Pricing */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="space-y-8"
               >
-                <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
-                  Meet the Founder
-                </Badge>
+                <div className="space-y-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                  >
+                    <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
+                      WHAT WE OFFER
+                    </Badge>
+                  </motion.div>
+
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                    className="text-4xl lg:text-5xl font-bold leading-tight"
+                  >
+                    <span className="text-foreground">WEBSITES STARTING AT</span>{" "}
+                    <span className="gradient-text">$0 DOWN</span>{" "}
+                    <span className="text-foreground">AND</span>{" "}
+                    <span className="gradient-text">$150 PER MONTH</span>
+                  </motion.h2>
+
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                    className="text-muted-foreground leading-relaxed text-lg"
+                  >
+                    We offer $0 down for a standard 5-page professional business website. If you need more than 
+                    that, we provide custom pricing based on scope of work, additional features, and complexity. 
+                    12-month minimum contract includes design, development, hosting, unlimited edits, 24/7 support, 
+                    and lifetime updates.
+                  </motion.p>
+                </div>
+
+                {/* Feature Grid */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                >
+                  {[
+                    {
+                      icon: "🔒",
+                      title: "100% SECURE",
+                      description: "Our sites use enterprise-grade security, SSL certificates, and best practices to keep your data safe."
+                    },
+                    {
+                      icon: "🎨",
+                      title: "CUSTOM DESIGNED",
+                      description: "Every design is crafted by our in-house design team to perfectly match your brand and vision."
+                    },
+                    {
+                      icon: "⚡",
+                      title: "LIGHTNING FAST",
+                      description: "Optimized for speed with perfect 100/100 PageSpeed scores and blazing-fast load times."
+                    },
+                    {
+                      icon: "💰",
+                      title: "MONEY BACK GUARANTEE",
+                      description: "If we can't deliver what you need, you get your money back. We stand behind our work."
+                    },
+                    {
+                      icon: "🚀",
+                      title: "UNLIMITED SUPPORT",
+                      description: "Real support from real developers. When you call, you get the owner and lead developer."
+                    },
+                    {
+                      icon: "📈",
+                      title: "SEO OPTIMIZED",
+                      description: "Built with SEO best practices from day one. We know what works and how to get you ranking."
+                    }
+                  ].map((feature, index) => (
+                    <motion.div
+                      key={feature.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                      className="space-y-3"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="text-2xl">{feature.icon}</div>
+                        <h3 className="font-bold text-foreground text-sm tracking-wide">
+                          {feature.title}
+                        </h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed pl-11">
+                        {feature.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </motion.div>
+
+                {/* CTA Button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.5 }}
+                  className="pt-4"
+                >
+                  <Button 
+                    size="lg" 
+                    className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold tracking-wide" 
+                    asChild
+                  >
+                    <Link href="/contact">
+                      SCHEDULE A CALL
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                </motion.div>
               </motion.div>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="heading-2"
-              >
-                Crafting Digital Excellence with <span className="gradient-text">AhmerZ</span>
-              </motion.h2>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="space-y-4 text-muted-foreground leading-relaxed"
-              >
-                <p>
-                  Hi, I'm AhmerZ, the founder and lead developer behind this innovative development studio.
-                  With over 5 years of experience in full-stack development, I've dedicated my career to
-                  transforming ideas into powerful digital solutions that drive real business results.
-                </p>
-
-                <p>
-                  Our mission is simple: to bridge the gap between cutting-edge technology and practical
-                  business needs. We specialize in creating scalable web applications, mobile experiences,
-                  and digital products that not only look beautiful but also perform exceptionally.
-                </p>
-
-                <p>
-                  What sets AhmerZ apart is our commitment to excellence, attention to detail, and
-                  passion for solving complex problems. Every project we undertake is an opportunity
-                  to push boundaries and deliver solutions that exceed expectations.
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Stats/Highlights */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="grid grid-cols-2 gap-6"
-            >
-              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-primary/5 to-blue-500/5 border border-primary/10">
-                <div className="text-2xl font-bold text-primary mb-1">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
-              </div>
-              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-primary/5 to-blue-500/5 border border-primary/10">
-                <div className="text-2xl font-bold text-primary mb-1">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-            </motion.div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              className="flex flex-col sm:flex-row gap-4"
-            >
-              <Button size="lg" className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" asChild>
-                <Link href="/contact">
-                  Let's Work Together
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/about">
-                  Learn More About Us
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
         </div>
       </Section>
 

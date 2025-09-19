@@ -48,7 +48,7 @@ export default function HomePage() {
   const featuredTestimonials = testimonials.slice(0, 3);
 
   return (
-    <>
+    <div>
       {/* Hero Section */}
       <Section className="relative pt-4 pb-12 md:pt-6 md:pb-16 overflow-hidden">
         {/* Enhanced background with mesh gradient */}
@@ -726,6 +726,6 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
-    </>
+    </div>
   );
 }

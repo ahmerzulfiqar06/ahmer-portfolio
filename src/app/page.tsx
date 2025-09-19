@@ -707,20 +707,20 @@ export default function HomePage() {
       </Section>
 
       {/* Pricing Packages Section */}
-      <Section className="bg-gradient-to-b from-slate-900 to-slate-950 dark:from-slate-950 dark:to-black text-white">
+      <Section className="bg-gradient-to-b from-muted/30 to-muted/50 dark:from-slate-900 dark:to-slate-950">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-6 bg-blue-500/20 text-blue-400 border-blue-500/30 hover:bg-blue-500/30 text-sm font-medium">
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
               OUR PRICING
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               PRICING PACKAGES FOR<br />EVERY BUDGET
             </h2>
-            <p className="text-lg max-w-3xl mx-auto text-slate-300 leading-relaxed">
+            <p className="text-lg max-w-3xl mx-auto text-muted-foreground leading-relaxed">
               Choose the perfect plan for your business. From simple websites to complex mobile applications,
               we have flexible options to suit your needs and budget.
             </p>
@@ -735,11 +735,11 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="h-full bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
+            <div className="h-full bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:border-primary/50 transition-all duration-300 shadow-lg">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">STARTER</h3>
-                  <p className="text-slate-400 text-sm">Perfect for small businesses</p>
+                  <h3 className="text-2xl font-bold mb-2">STARTER</h3>
+                  <p className="text-muted-foreground text-sm">Perfect for small businesses</p>
                 </div>
 
                 <div className="space-y-4">
@@ -747,44 +747,44 @@ export default function HomePage() {
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">5-Page Professional Website</span>
+                    <span className="text-foreground">5-Page Professional Website</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Mobile Responsive Design</span>
+                    <span className="text-foreground">Mobile Responsive Design</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Basic SEO Optimization</span>
+                    <span className="text-foreground">Basic SEO Optimization</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Contact Form Integration</span>
+                    <span className="text-foreground">Contact Form Integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">1 Month Free Support</span>
+                    <span className="text-foreground">1 Month Free Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-5 h-5 rounded-full bg-slate-500/20 flex items-center justify-center">
-                      <div className="w-2 h-2 rounded-full bg-slate-500"></div>
+                    <div className="w-5 h-5 rounded-full bg-muted-foreground/20 flex items-center justify-center">
+                      <div className="w-2 h-2 rounded-full bg-muted-foreground"></div>
                     </div>
-                    <span className="text-slate-500">Lifetime Updates</span>
+                    <span className="text-muted-foreground">Lifetime Updates</span>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-700/50">
+                <div className="pt-6 border-t border-border/50">
                   <div className="flex items-baseline space-x-2 mb-6">
-                    <span className="text-4xl font-bold text-white">$150</span>
-                    <span className="text-slate-400">Per Month</span>
+                    <span className="text-4xl font-bold">$150</span>
+                    <span className="text-muted-foreground">Per Month</span>
                   </div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -793,7 +793,7 @@ export default function HomePage() {
                   >
                     <Button
                       size="lg"
-                      className="w-full bg-white text-slate-900 hover:bg-slate-100 font-semibold"
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
                       asChild
                     >
                       <Link href="/contact">GET STARTED</Link>
@@ -818,14 +818,14 @@ export default function HomePage() {
               </Badge>
             </div>
             
-            <div className="h-full bg-gradient-to-b from-blue-900/30 to-slate-900/50 backdrop-blur-sm border-2 border-blue-500/50 rounded-2xl p-8 relative overflow-hidden">
+            <div className="h-full bg-background/90 backdrop-blur-sm border-2 border-primary/50 rounded-2xl p-8 relative overflow-hidden shadow-xl">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
               
               <div className="relative space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">PROFESSIONAL</h3>
-                  <p className="text-slate-400 text-sm">Complete web & mobile solution</p>
+                  <h3 className="text-2xl font-bold mb-2">PROFESSIONAL</h3>
+                  <p className="text-muted-foreground text-sm">Complete web & mobile solution</p>
                 </div>
 
                 <div className="space-y-4">
@@ -833,44 +833,44 @@ export default function HomePage() {
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Custom Website (10+ Pages)</span>
+                    <span className="text-foreground">Custom Website (10+ Pages)</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Mobile App (iOS & Android)</span>
+                    <span className="text-foreground">Mobile App (iOS & Android)</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Admin Dashboard</span>
+                    <span className="text-foreground">Admin Dashboard</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Payment Integration</span>
+                    <span className="text-foreground">Payment Integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">3 Months Free Support</span>
+                    <span className="text-foreground">3 Months Free Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Lifetime Updates</span>
+                    <span className="text-foreground">Lifetime Updates</span>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-700/50">
+                <div className="pt-6 border-t border-border/50">
                   <div className="flex items-baseline space-x-2 mb-6">
-                    <span className="text-4xl font-bold text-white">$350</span>
-                    <span className="text-slate-400">Per Month</span>
+                    <span className="text-4xl font-bold">$350</span>
+                    <span className="text-muted-foreground">Per Month</span>
                   </div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -897,11 +897,11 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative"
           >
-            <div className="h-full bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300">
+            <div className="h-full bg-background/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 shadow-lg">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">ENTERPRISE</h3>
-                  <p className="text-slate-400 text-sm">Large-scale custom solutions</p>
+                  <h3 className="text-2xl font-bold mb-2">ENTERPRISE</h3>
+                  <p className="text-muted-foreground text-sm">Large-scale custom solutions</p>
                 </div>
 
                 <div className="space-y-4">
@@ -909,44 +909,44 @@ export default function HomePage() {
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Unlimited Pages & Features</span>
+                    <span className="text-foreground">Unlimited Pages & Features</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Custom Mobile Apps</span>
+                    <span className="text-foreground">Custom Mobile Apps</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Advanced Backend Systems</span>
+                    <span className="text-foreground">Advanced Backend Systems</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">API Development</span>
+                    <span className="text-foreground">API Development</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">24/7 Priority Support</span>
+                    <span className="text-foreground">24/7 Priority Support</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
                       <div className="w-2 h-2 rounded-full bg-green-500"></div>
                     </div>
-                    <span className="text-slate-300">Dedicated Project Manager</span>
+                    <span className="text-foreground">Dedicated Project Manager</span>
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-700/50">
+                <div className="pt-6 border-t border-border/50">
                   <div className="flex items-baseline space-x-2 mb-6">
-                    <span className="text-3xl font-bold text-white">Custom</span>
-                    <span className="text-slate-400">Quote</span>
+                    <span className="text-3xl font-bold">Custom</span>
+                    <span className="text-muted-foreground">Quote</span>
                   </div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
@@ -955,7 +955,7 @@ export default function HomePage() {
                   >
                     <Button
                       size="lg"
-                      className="w-full bg-white text-slate-900 hover:bg-slate-100 font-semibold"
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
                       asChild
                     >
                       <Link href="/contact">CONTACT US</Link>
@@ -974,8 +974,8 @@ export default function HomePage() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-slate-400 mb-2">All plans include:</p>
-          <p className="text-slate-300">
+          <p className="text-muted-foreground mb-2">All plans include:</p>
+          <p className="text-foreground">
             Free Hosting • SSL Certificate • Domain Setup • Unlimited Revisions • Source Code Access
           </p>
         </motion.div>

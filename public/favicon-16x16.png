@@ -1,61 +1,14 @@
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="faviconBg16" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
-    <linearGradient id="faviconText16" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.95" />
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
     </linearGradient>
   </defs>
-
-  {/* Modern geometric background */}
-  <rect
-    x="1"
-    y="1"
-    width="14"
-    height="14"
-    rx="2"
-    fill="url(#faviconBg16)"
-  />
-
-  {/* Clean border */}
-  <rect
-    x="1.5"
-    y="1.5"
-    width="13"
-    height="13"
-    rx="1.5"
-    fill="none"
-    stroke="url(#faviconText16)"
-    stroke-width="0.3"
-    opacity="0.2"
-  />
-
-  {/* Modern typography */}
-  <text
-    x="8"
-    y="10.5"
-    font-family="'Inter', system-ui, -apple-system, sans-serif"
-    font-size="5"
-    font-weight="800"
-    text-anchor="middle"
-    fill="url(#faviconText16)"
-    letter-spacing="0.3"
-  >
-    AhmerZ
-  </text>
-
-  {/* Minimal accent line */}
-  <line
-    x1="4"
-    y1="5"
-    x2="6"
-    y2="5"
-    stroke="url(#faviconText16)"
-    stroke-width="0.8"
-    stroke-linecap="round"
-    opacity="0.7"
-  />
+  <rect width="16" height="16" rx="3" fill="url(#bgGradient)"/>
+  <text x="8" y="11" font-family="system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" text-anchor="middle" fill="url(#textGradient)">AZ</text>
 </svg>

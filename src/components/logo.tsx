@@ -9,8 +9,6 @@ interface LogoProps {
 
 export function Logo({ className = "", showText = true, variant = "default" }: LogoProps) {
   const isFooter = variant === "footer";
-  const size = isFooter ? "32" : "48";
-  const iconSize = isFooter ? "32" : "40";
 
   return (
     <Link
@@ -21,72 +19,64 @@ export function Logo({ className = "", showText = true, variant = "default" }: L
       {/* Logo Icon */}
       <div className="relative">
         <svg
-          width={iconSize}
-          height={iconSize}
-          viewBox={`0 0 ${size} ${size}`}
-          className={`transition-all duration-300 ${isFooter ? 'group-hover:scale-110' : 'group-hover:scale-105'}`}
+          width={isFooter ? "36" : "44"}
+          height={isFooter ? "36" : "44"}
+          viewBox="0 0 44 44"
+          className={`transition-transform duration-300 ${isFooter ? 'group-hover:scale-110' : 'group-hover:scale-105'}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
             <linearGradient id={`logoBg-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.9 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.8 }} />
             </linearGradient>
             <linearGradient id={`logoText-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#f8fafc', stopOpacity: 0.95 }} />
+              <stop offset="100%" style={{ stopColor: '#f8fafc', stopOpacity: 0.9 }} />
             </linearGradient>
           </defs>
 
-          {/* Modern geometric background */}
-          <rect
-            x={isFooter ? "2" : "4"}
-            y={isFooter ? "2" : "4"}
-            width={isFooter ? "28" : "40"}
-            height={isFooter ? "28" : "40"}
-            rx={isFooter ? "6" : "8"}
+          {/* Clean circular background */}
+          <circle
+            cx="22"
+            cy="22"
+            r="20"
             fill={`url(#logoBg-${variant})`}
-            className="drop-shadow-lg"
+            className="drop-shadow-md"
           />
 
-          {/* Clean border */}
-          <rect
-            x={isFooter ? "3" : "5"}
-            y={isFooter ? "3" : "5"}
-            width={isFooter ? "26" : "38"}
-            height={isFooter ? "26" : "38"}
-            rx={isFooter ? "5" : "7"}
+          {/* Subtle inner ring */}
+          <circle
+            cx="22"
+            cy="22"
+            r="18"
             fill="none"
             stroke={`url(#logoText-${variant})`}
             strokeWidth="0.5"
-            opacity="0.2"
+            opacity="0.3"
           />
 
-          {/* Modern typography */}
+          {/* Clean typography */}
           <text
-            x={isFooter ? "16" : "24"}
-            y={isFooter ? "21" : "29"}
-            fontFamily="'Inter', system-ui, -apple-system, sans-serif"
-            fontSize={isFooter ? "10" : "14"}
-            fontWeight="800"
+            x="22"
+            y="28"
+            fontFamily="system-ui, -apple-system, sans-serif"
+            fontSize={isFooter ? "12" : "14"}
+            fontWeight="700"
             textAnchor="middle"
             fill={`url(#logoText-${variant})`}
-            letterSpacing={isFooter ? "0.5" : "0.8"}
             className="drop-shadow-sm"
           >
             AhmerZ
           </text>
 
-          {/* Minimal accent line */}
-          <line
-            x1={isFooter ? "8" : "12"}
-            y1={isFooter ? "12" : "16"}
-            x2={isFooter ? "12" : "16"}
-            y2={isFooter ? "12" : "16"}
-            stroke={`url(#logoText-${variant})`}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            opacity="0.7"
+          {/* Simple accent dot */}
+          <circle
+            cx="22"
+            cy="15"
+            r="1.5"
+            fill={`url(#logoText-${variant})`}
+            opacity="0.6"
           />
         </svg>
       </div>

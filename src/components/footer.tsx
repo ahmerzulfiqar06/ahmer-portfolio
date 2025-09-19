@@ -40,7 +40,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Logo variant="footer" showText={true} />
+            <Logo variant="footer" showText={false} />
             <p className="text-muted-foreground text-sm max-w-xs">
               Full-stack development company crafting exceptional digital experiences for
               startups and agencies worldwide.

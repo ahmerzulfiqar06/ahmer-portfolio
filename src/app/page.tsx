@@ -484,31 +484,20 @@ export default function HomePage() {
           <motion.div
             whileHover={{ 
               scale: 1.05,
-              y: -3,
-              boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+              y: -3
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="inline-block"
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 hover:bg-black text-white text-lg px-12 py-6 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all duration-300"
               asChild
             >
-              <Link href="/contact">
-                <motion.span
-                  whileHover={{ x: 2 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                  className="flex items-center"
-                >
-                  SCHEDULE A CALL
-                  <motion.div
-                    whileHover={{ x: 3 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </motion.div>
-                </motion.span>
+              <Link href="/contact" className="flex items-center">
+                SCHEDULE A CALL
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </motion.div>

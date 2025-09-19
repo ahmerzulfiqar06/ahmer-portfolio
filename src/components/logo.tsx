@@ -19,64 +19,89 @@ export function Logo({ className = "", showText = true, variant = "default" }: L
       {/* Logo Icon */}
       <div className="relative">
         <svg
-          width={isFooter ? "36" : "44"}
-          height={isFooter ? "36" : "44"}
-          viewBox="0 0 44 44"
+          width={isFooter ? "42" : "52"}
+          height={isFooter ? "42" : "52"}
+          viewBox="0 0 52 52"
           className={`transition-transform duration-300 ${isFooter ? 'group-hover:scale-110' : 'group-hover:scale-105'}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
             <linearGradient id={`logoBg-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.8 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.9 }} />
             </linearGradient>
-            <linearGradient id={`logoText-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#f8fafc', stopOpacity: 0.9 }} />
+            <linearGradient id={`logoAccent-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
             </linearGradient>
           </defs>
 
-          {/* Clean circular background */}
-          <circle
-            cx="22"
-            cy="22"
-            r="20"
+          {/* Modern sleek background */}
+          <rect
+            x="2"
+            y="2"
+            width="48"
+            height="48"
+            rx="12"
             fill={`url(#logoBg-${variant})`}
-            className="drop-shadow-md"
+            className="drop-shadow-lg"
           />
 
-          {/* Subtle inner ring */}
-          <circle
-            cx="22"
-            cy="22"
-            r="18"
+          {/* Elegant inner border */}
+          <rect
+            x="4"
+            y="4"
+            width="44"
+            height="44"
+            rx="10"
             fill="none"
-            stroke={`url(#logoText-${variant})`}
-            strokeWidth="0.5"
-            opacity="0.3"
+            stroke={`url(#logoAccent-${variant})`}
+            strokeWidth="0.8"
+            opacity="0.4"
           />
 
-          {/* Clean typography */}
+          {/* Stylish connected typography */}
           <text
-            x="22"
-            y="28"
-            fontFamily="system-ui, -apple-system, sans-serif"
-            fontSize={isFooter ? "12" : "14"}
-            fontWeight="700"
+            x="26"
+            y="32"
+            fontFamily="'Segoe UI', 'Helvetica Neue', system-ui, sans-serif"
+            fontSize={isFooter ? "14" : "16"}
+            fontWeight="600"
             textAnchor="middle"
-            fill={`url(#logoText-${variant})`}
+            fill="white"
+            letterSpacing={isFooter ? "1" : "1.2"}
             className="drop-shadow-sm"
+            style={{
+              fontStyle: 'italic',
+              textShadow: '0 1px 2px rgba(0,0,0,0.1)'
+            }}
           >
             AhmerZ
           </text>
 
-          {/* Simple accent dot */}
+          {/* Modern accent elements */}
           <circle
-            cx="22"
-            cy="15"
+            cx="16"
+            cy="16"
+            r="2"
+            fill="white"
+            opacity="0.8"
+          />
+          <circle
+            cx="36"
+            cy="16"
             r="1.5"
-            fill={`url(#logoText-${variant})`}
+            fill="white"
             opacity="0.6"
+          />
+
+          {/* Sleek connecting line */}
+          <path
+            d="M16 18 L36 18"
+            stroke="white"
+            strokeWidth="0.8"
+            opacity="0.4"
+            strokeLinecap="round"
           />
         </svg>
       </div>
@@ -84,7 +109,19 @@ export function Logo({ className = "", showText = true, variant = "default" }: L
       {/* Text */}
       {showText && (
         <div className="flex flex-col">
-          <span className={`gradient-text leading-tight ${isFooter ? 'text-lg' : 'text-xl'}`}>AhmerZ</span>
+          <span
+            className={`leading-tight font-semibold ${isFooter ? 'text-lg' : 'text-xl'}`}
+            style={{
+              background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary)) 50%, #3b82f6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              fontStyle: 'italic',
+              letterSpacing: '0.5px'
+            }}
+          >
+            AhmerZ
+          </span>
           {!isFooter && (
             <span className="text-xs text-muted-foreground font-normal -mt-0.5">
               Full-Stack Development

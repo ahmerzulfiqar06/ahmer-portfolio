@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="relative pt-16 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+      <Section className="relative pt-8 pb-12 md:pt-12 md:pb-16 overflow-hidden">
         {/* Enhanced background with mesh gradient */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-primary/[0.02] to-background" />

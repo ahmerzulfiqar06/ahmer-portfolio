@@ -8,6 +8,7 @@ import { Menu, X, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Logo } from "@/components/logo";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -25,12 +26,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center space-x-2 font-bold text-xl"
-        >
-          <span className="gradient-text">AZ</span>
-        </Link>
+        <Logo showText={false} />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">

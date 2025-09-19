@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, ExternalLink, Code, Smartphone, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -319,38 +320,15 @@ export default function HomePage() {
               {/* Main photo container */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-blue-500/10 p-1">
                 <div className="relative h-96 lg:h-[500px] w-full overflow-hidden rounded-xl bg-muted">
-                  {/* Person placeholder image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
-                    {/* Person silhouette */}
-                    <div className="relative">
-                      {/* Head/Face */}
-                      <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 flex items-center justify-center mb-6 shadow-2xl border-4 border-white dark:border-slate-700">
-                        {/* Face details */}
-                        <div className="w-36 h-36 rounded-full bg-gradient-to-br from-blue-300 to-blue-500 dark:from-blue-400 dark:to-blue-600 border-2 border-white/50 dark:border-slate-600/50">
-                          {/* Eyes */}
-                          <div className="flex justify-center items-center h-full space-x-8">
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                            <div className="w-3 h-3 bg-white rounded-full"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Body/Shirt */}
-                      <div className="w-52 h-32 mx-auto bg-gradient-to-br from-slate-600 to-slate-800 dark:from-slate-500 dark:to-slate-700 rounded-lg shadow-xl relative">
-                        {/* Shirt details */}
-                        <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-20 h-4 bg-white/20 rounded-full"></div>
-                        {/* Arms hint */}
-                        <div className="absolute -left-4 top-8 w-8 h-16 bg-gradient-to-br from-slate-500 to-slate-700 dark:from-slate-400 dark:to-slate-600 rounded-full"></div>
-                        <div className="absolute -right-4 top-8 w-8 h-16 bg-gradient-to-br from-slate-500 to-slate-700 dark:from-slate-400 dark:to-slate-600 rounded-full"></div>
-                      </div>
-
-                      {/* Name overlay */}
-                      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-                        <div className="text-lg font-bold text-slate-800 dark:text-slate-200">AhmerZ</div>
-                        <div className="text-sm text-slate-600 dark:text-slate-400">Full-Stack Developer</div>
-                      </div>
-                    </div>
-                  </div>
+                  {/* Replace with your actual photo */}
+                  <Image
+                    src="/your-photo.jpg" // <-- Replace with your actual image filename
+                    alt="AhmerZ - Full-Stack Developer"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    priority
+                  />
 
                   {/* Floating elements */}
                   <div className="absolute top-4 right-4 space-y-2">

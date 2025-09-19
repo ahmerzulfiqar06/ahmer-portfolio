@@ -19,8 +19,8 @@ export function Logo({ className = "", showText = true, variant = "default" }: L
       {/* Logo Icon - Same as favicon design */}
       <div className="relative">
         <svg
-          width={isFooter ? "36" : "44"}
-          height={isFooter ? "36" : "44"}
+          width={isFooter ? "36" : "60"}
+          height={isFooter ? "36" : "60"}
           viewBox="0 0 44 44"
           className={`transition-transform duration-300 ${isFooter ? 'group-hover:scale-110' : 'group-hover:scale-105'}`}
           xmlns="http://www.w3.org/2000/svg"

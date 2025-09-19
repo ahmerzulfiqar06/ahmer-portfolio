@@ -302,6 +302,166 @@ export default function HomePage() {
         </motion.div>
       </Section>
 
+      {/* About Developer Section */}
+      <Section className="bg-gradient-to-br from-background via-primary/[0.02] to-background">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left side - Developer Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative group">
+              {/* Background glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Main photo container */}
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-blue-500/10 p-1">
+                <div className="relative h-96 lg:h-[500px] w-full overflow-hidden rounded-xl bg-muted">
+                  {/* Person placeholder image */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex items-center justify-center">
+                    {/* Person silhouette */}
+                    <div className="relative">
+                      {/* Head */}
+                      <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-slate-300 to-slate-400 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center mb-4 shadow-lg">
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 border-4 border-white dark:border-slate-600"></div>
+                      </div>
+
+                      {/* Body/Shirt */}
+                      <div className="w-40 h-24 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg shadow-md relative">
+                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-16 h-3 bg-white/20 rounded-full"></div>
+                      </div>
+
+                      {/* Simple text overlay */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+                        <div className="text-xs text-slate-600 dark:text-slate-300 font-medium">AhmerZ</div>
+                        <div className="text-xs text-slate-500 dark:text-slate-400">Full-Stack Developer</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating elements */}
+                  <div className="absolute top-4 right-4 space-y-2">
+                    {[...Array(3)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="w-3 h-3 bg-primary/60 rounded-full"
+                        animate={{
+                          y: [-10, 10, -10],
+                          opacity: [0.6, 1, 0.6],
+                        }}
+                        transition={{
+                          duration: 3 + i * 0.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: i * 0.8,
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Decorative corner elements */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/40 rounded-tl-lg"></div>
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/40 rounded-br-lg"></div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right side - Company Details */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-8"
+          >
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+                  Meet the Founder
+                </Badge>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="heading-2"
+              >
+                Crafting Digital Excellence with <span className="gradient-text">AhmerZ</span>
+              </motion.h2>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="space-y-4 text-muted-foreground leading-relaxed"
+              >
+                <p>
+                  Hi, I'm AhmerZ, the founder and lead developer behind this innovative development studio.
+                  With over 5 years of experience in full-stack development, I've dedicated my career to
+                  transforming ideas into powerful digital solutions that drive real business results.
+                </p>
+
+                <p>
+                  Our mission is simple: to bridge the gap between cutting-edge technology and practical
+                  business needs. We specialize in creating scalable web applications, mobile experiences,
+                  and digital products that not only look beautiful but also perform exceptionally.
+                </p>
+
+                <p>
+                  What sets AhmerZ apart is our commitment to excellence, attention to detail, and
+                  passion for solving complex problems. Every project we undertake is an opportunity
+                  to push boundaries and deliver solutions that exceed expectations.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Stats/Highlights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="grid grid-cols-2 gap-6"
+            >
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-primary/5 to-blue-500/5 border border-primary/10">
+                <div className="text-2xl font-bold text-primary mb-1">50+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              </div>
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-primary/5 to-blue-500/5 border border-primary/10">
+                <div className="text-2xl font-bold text-primary mb-1">5+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
+              </div>
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button size="lg" className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90" asChild>
+                <Link href="/contact">
+                  Let's Work Together
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/about">
+                  Learn More About Us
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </Section>
+
       {/* Featured Projects */}
       <Section className="bg-muted/30">
         <div className="text-center mb-12">

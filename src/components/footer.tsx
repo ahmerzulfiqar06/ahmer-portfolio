@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Github, Linkedin, Twitter, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 const socialLinks = [
   {
@@ -39,11 +40,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold text-xl gradient-text">
-                AhmerZ
-              </span>
-            </Link>
+            <Logo variant="footer" showText={true} />
             <p className="text-muted-foreground text-sm max-w-xs">
               Full-stack development company crafting exceptional digital experiences for
               startups and agencies worldwide.

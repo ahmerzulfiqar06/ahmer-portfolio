@@ -80,42 +80,57 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 min-h-[70vh] items-start">
-          {/* Left side content - Headline and Description */}
-          <div className="relative z-10 space-y-4 text-left lg:col-span-1">
-            {/* Main headline with enhanced typography */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-3xl"
-            >
-              <span className="block leading-tight">
-                Full-Stack Engineer
-              </span>
-              <motion.span
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 leading-tight"
+        <div className="relative flex flex-col min-h-[70vh]">
+          {/* Top section - Headline/Description and Mockups */}
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center flex-1">
+            {/* Left side content - Headline and Description */}
+            <div className="relative z-10 space-y-6 text-left">
+              {/* Main headline with enhanced typography */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
               >
-                Crafting Digital Excellence
-              </motion.span>
-            </motion.h1>
+                <span className="block leading-tight">
+                  Full-Stack Engineer
+                </span>
+                <motion.span
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-500 leading-tight"
+                >
+                  Crafting Digital Excellence
+                </motion.span>
+              </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-lg md:text-xl max-w-2xl text-muted-foreground/80 leading-relaxed"
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="text-lg md:text-xl max-w-2xl text-muted-foreground/80 leading-relaxed"
+              >
+                Transforming ideas into scalable applications with modern technologies
+                and exceptional user experiences.
+              </motion.p>
+            </div>
+
+            {/* Right side animation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative z-10 flex justify-center lg:justify-end"
             >
-              Transforming ideas into scalable applications with modern technologies
-              and exceptional user experiences.
-            </motion.p>
+              <div className="relative">
+                <HeroAnimation />
+              </div>
+            </motion.div>
           </div>
 
-          {/* Center - Buttons and Stats */}
-          <div className="relative z-10 flex flex-col justify-center items-center space-y-8 lg:col-span-1">
+          {/* Bottom section - Buttons and Stats */}
+          <div className="relative z-10 flex flex-col items-center justify-center space-y-8 mt-12">
             {/* Enhanced action buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -182,18 +197,6 @@ export default function HomePage() {
               </div>
             </motion.div>
           </div>
-
-          {/* Right side animation */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative z-10 flex justify-center lg:justify-end lg:col-span-1"
-          >
-            <div className="relative">
-              <HeroAnimation />
-            </div>
-          </motion.div>
         </div>
       </Section>
 

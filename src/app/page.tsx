@@ -82,27 +82,8 @@ export default function HomePage() {
 
         <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh]">
           {/* Left side content */}
-          <div className="relative z-10 space-y-8 text-left">
-            {/* Status badge with enhanced styling */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex justify-start"
-            >
-            <Badge className="border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 transition-all duration-300 backdrop-blur-sm">
-              <div className="flex items-center gap-2 px-2 py-1">
-                <motion.div 
-                  className="w-2 h-2 bg-green-400 rounded-full"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-                <span className="font-medium">Available for new projects</span>
-              </div>
-            </Badge>
-          </motion.div>
-          
-          {/* Main headline with enhanced typography */}
+          <div className="relative z-10 space-y-6 text-left">
+            {/* Main headline with enhanced typography */}
           <div className="space-y-4">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -139,7 +120,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
-              className="flex flex-col sm:flex-row gap-3 justify-start items-start"
+              className="flex flex-col sm:flex-row gap-3 justify-center items-center"
             >
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
@@ -182,7 +163,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.1 }}
-              className="flex justify-start items-center gap-8 pt-6"
+              className="flex justify-center items-center gap-8 pt-6"
             >
             <div className="text-center">
               <div className="text-xl font-bold text-primary">50+</div>
@@ -194,7 +175,7 @@ export default function HomePage() {
               <div className="text-xs text-muted-foreground">Happy Clients</div>
             </div>
             <div className="w-px h-6 bg-border" />
-            <div className="text-left">
+            <div className="text-center">
               <div className="text-xl font-bold text-primary">5+</div>
               <div className="text-xs text-muted-foreground">Years Experience</div>
             </div>

@@ -11,6 +11,7 @@ import { Testimonial } from "@/components/testimonial";
 
 import { projects } from "@/data/projects";
 import { testimonials } from "@/data/testimonials";
+import { HeroAnimation } from "@/components/hero-animation";
 
 const techStack = [
   "Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", 
@@ -197,6 +198,25 @@ export default function HomePage() {
             </div>
           </motion.div>
         </div>
+      </Section>
+
+      {/* Hero Animation Section */}
+      <Section className="py-16 md:py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">
+            Crafting Digital Experiences
+          </h2>
+          <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
+            From concept to deployment, I build scalable applications that combine
+            cutting-edge technology with intuitive design.
+          </p>
+          <HeroAnimation />
+        </motion.div>
       </Section>
 
       {/* Services */}

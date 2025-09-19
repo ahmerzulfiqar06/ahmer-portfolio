@@ -2,6 +2,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { generateMetadata } from "@/lib/seo";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { PageTransition } from "@/components/page-transition";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -26,7 +27,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${jetbrainsMono.variable} min-h-screen flex flex-col`}>
         <Nav />
         <main className="flex-1">
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </main>
         <Footer />
       </body>

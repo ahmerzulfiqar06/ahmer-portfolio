@@ -26,49 +26,98 @@ export function Logo({ className = "", showText = true, variant = "default" }: L
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            <linearGradient id={`bgGradient-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: 'hsl(var(--background))', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: 'hsl(var(--muted))', stopOpacity: 1 }} />
-            </linearGradient>
-            <linearGradient id={`textGradient-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient id={`primaryGradient-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.8 }} />
+              <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.7 }} />
             </linearGradient>
+            <linearGradient id={`accentGradient-${variant}`} x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style={{ stopColor: '#60a5fa', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#3b82f6', stopOpacity: 1 }} />
+            </linearGradient>
+            <filter id={`glow-${variant}`}>
+              <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
           </defs>
 
-          {/* Rounded rectangle background - theme aware */}
+          {/* Transparent background - just elegant borders */}
           <rect
             width="44"
             height="44"
-            rx="8"
-            fill={`url(#bgGradient-${variant})`}
-            className="drop-shadow-md"
+            rx="10"
+            fill="none"
+            stroke={`url(#primaryGradient-${variant})`}
+            strokeWidth="1.5"
+            opacity="0.8"
+            className="drop-shadow-sm"
           />
 
-          {/* Inner circle stroke - theme aware */}
-          <circle
-            cx="22"
-            cy="22"
-            r="19"
+          {/* Inner gradient ring */}
+          <rect
+            x="3"
+            y="3"
+            width="38"
+            height="38"
+            rx="8"
             fill="none"
-            stroke={`url(#textGradient-${variant})`}
-            strokeWidth="0.7"
+            stroke={`url(#accentGradient-${variant})`}
+            strokeWidth="0.8"
+            opacity="0.6"
+          />
+
+          {/* Sleek inner accent */}
+          <rect
+            x="6"
+            y="6"
+            width="32"
+            height="32"
+            rx="6"
+            fill="none"
+            stroke={`url(#primaryGradient-${variant})`}
+            strokeWidth="0.3"
             opacity="0.4"
           />
 
-          {/* AZ text - theme aware */}
+          {/* AZ text with gradient and glow */}
           <text
             x="22"
             y="28"
-            fontFamily="system-ui, -apple-system, sans-serif"
+            fontFamily="'Inter', system-ui, -apple-system, sans-serif"
             fontSize={isFooter ? "14" : "16"}
-            fontWeight="700"
+            fontWeight="800"
             textAnchor="middle"
-            fill={`url(#textGradient-${variant})`}
+            fill={`url(#primaryGradient-${variant})`}
+            filter={`url(#glow-${variant})`}
+            letterSpacing="0.5"
             className="drop-shadow-sm"
           >
             AZ
           </text>
+
+          {/* Decorative accent lines */}
+          <line
+            x1="14"
+            y1="14"
+            x2="18"
+            y2="14"
+            stroke={`url(#accentGradient-${variant})`}
+            strokeWidth="1"
+            strokeLinecap="round"
+            opacity="0.5"
+          />
+          <line
+            x1="26"
+            y1="14"
+            x2="30"
+            y2="14"
+            stroke={`url(#accentGradient-${variant})`}
+            strokeWidth="1"
+            strokeLinecap="round"
+            opacity="0.5"
+          />
         </svg>
       </div>
 

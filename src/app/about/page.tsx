@@ -24,8 +24,8 @@ const stats = [
 const timeline = [
   {
     year: "2024",
-    title: "AZ Studios Founded",
-    description: "Established AZ Studios to provide comprehensive full-stack development services, focusing on startups and agencies worldwide."
+    title: "AZ Founded",
+    description: "Established AZ to provide comprehensive full-stack development services, focusing on startups and agencies worldwide."
   },
   {
     year: "2023",
@@ -57,11 +57,11 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <h1 className="heading-1">
-              About <span className="gradient-text">AZ Studios</span>
+              About <span className="gradient-text">AZ</span>
             </h1>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                AZ Studios is a leading full-stack development company specializing in
+                AZ is a leading full-stack development company specializing in
                 modern web applications, mobile apps, and digital experiences that solve
                 real-world problems and drive business growth.
               </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
             <div className="relative h-96 w-full rounded-lg overflow-hidden">
               <Image
                 src="/about/ahmer-profile.jpg"
-                alt="AZ Studios - Professional Development Team"
+                alt="AZ - Professional Development Team"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

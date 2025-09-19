@@ -11,7 +11,7 @@ export function Logo({ className = "", showText = true }: LogoProps) {
     <Link
       href="/"
       className={`flex items-center space-x-3 font-bold text-xl group ${className}`}
-      aria-label="AZ Studios - Home"
+      aria-label="AZ - Home"
     >
       {/* Logo Icon */}
       <div className="relative">
@@ -56,27 +56,15 @@ export function Logo({ className = "", showText = true }: LogoProps) {
           {/* Company Text */}
           <text
             x="20"
-            y="24"
+            y="26"
             fontFamily="system-ui, -apple-system, sans-serif"
-            fontSize="12"
+            fontSize="16"
             fontWeight="700"
             textAnchor="middle"
             fill="url(#logoText)"
             className="drop-shadow-sm"
           >
             AZ
-          </text>
-          <text
-            x="20"
-            y="30"
-            fontFamily="system-ui, -apple-system, sans-serif"
-            fontSize="8"
-            fontWeight="500"
-            textAnchor="middle"
-            fill="url(#logoText)"
-            opacity="0.8"
-          >
-            STUDIOS
           </text>
 
           {/* Subtle accent dot */}
@@ -93,7 +81,7 @@ export function Logo({ className = "", showText = true }: LogoProps) {
       {/* Text */}
       {showText && (
         <div className="flex flex-col">
-          <span className="gradient-text leading-tight">AZ Studios</span>
+          <span className="gradient-text leading-tight">AZ</span>
           <span className="text-xs text-muted-foreground font-normal -mt-0.5">
             Full-Stack Development
           </span>

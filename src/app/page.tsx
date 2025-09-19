@@ -311,12 +311,44 @@ export default function HomePage() {
 
       {/* What We Offer Section */}
       <Section className="bg-gradient-to-br from-background via-primary/[0.02] to-background">
+        {/* Centered Header */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
+              WHAT WE OFFER
+            </Badge>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-3xl lg:text-4xl font-black leading-tight"
+          >
+            <div className="text-foreground font-extrabold">WEBSITES & MOBILE APPS</div>
+            <div className="text-foreground font-extrabold">STARTING AT</div>
+            <div>
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
+                $0 DOWN
+              </span>
+              <span className="text-foreground font-extrabold mx-2">AND</span>
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
+                $150/MONTH
+              </span>
+            </div>
+          </motion.h2>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Developer Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
             <div className="relative group">
@@ -363,60 +395,29 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Right side - Services & Pricing */}
+          {/* Right side - Content */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             className="space-y-8"
           >
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                <Badge className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 text-sm font-medium">
-                  WHAT WE OFFER
-                </Badge>
-              </motion.div>
-
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-3xl lg:text-4xl font-black leading-tight"
-              >
-                <div className="text-foreground font-extrabold">WEBSITES & MOBILE APPS</div>
-                <div className="text-foreground font-extrabold">STARTING AT</div>
-                <div className="mt-2">
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
-                    $0 DOWN
-                  </span>
-                  <span className="text-foreground font-extrabold mx-2">AND</span>
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
-                    $150/MONTH
-                  </span>
-                </div>
-              </motion.h2>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-muted-foreground leading-relaxed text-lg"
-              >
-                We offer $0 down for professional websites and mobile applications. From standard 5-page business
-                websites to complex mobile apps with custom backends - we provide flexible pricing based on your
-                project scope.
-              </motion.p>
-            </div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-muted-foreground leading-relaxed text-lg"
+            >
+              We offer $0 down for professional websites and mobile applications. From standard 5-page business
+              websites to complex mobile apps with custom backends - we provide flexible pricing based on your
+              project scope.
+            </motion.p>
 
             {/* Feature Grid */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
@@ -455,7 +456,7 @@ export default function HomePage() {
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   className="space-y-2"
                 >
                   <div className="flex items-center space-x-3">
@@ -470,27 +471,48 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </motion.div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.5 }}
-              className="pt-4"
-            >
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold"
-                asChild
-              >
-                <Link href="/contact">
-                  SCHEDULE A CALL
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
           </motion.div>
         </div>
+
+        {/* Centered CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="text-center mt-12"
+        >
+          <motion.div
+            whileHover={{ 
+              scale: 1.05,
+              y: -3,
+              boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 text-lg px-12 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
+            >
+              <Link href="/contact">
+                <motion.span
+                  whileHover={{ x: 2 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                  className="flex items-center"
+                >
+                  SCHEDULE A CALL
+                  <motion.div
+                    whileHover={{ x: 3 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </motion.div>
+                </motion.span>
+              </Link>
+            </Button>
+          </motion.div>
+        </motion.div>
       </Section>
 
       {/* Featured Projects */}

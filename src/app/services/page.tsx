@@ -27,8 +27,8 @@ export default function ServicesPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="body-large max-w-3xl mx-auto"
           >
-            Whether you're a startup looking to validate your idea or an agency 
-            needing reliable development partners, I provide tailored solutions 
+            Whether you're a startup looking to validate your idea or an agency
+            needing reliable development partners, we provide tailored solutions
             that deliver measurable results.
           </motion.p>
         </div>
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                   {/* CTA */}
                   <Button asChild className="w-full">
                     <Link href="/contact">
-                      Partner With Me
+                      Partner With Us
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -204,9 +204,9 @@ export default function ServicesPage() {
       {/* Process */}
       <Section className="bg-muted/30">
         <div className="text-center mb-12">
-          <h2 className="heading-2 mb-4">My Process</h2>
+          <h2 className="heading-2 mb-4">Our Process</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            A proven methodology that ensures your project is delivered on time, 
+            A proven methodology that ensures your project is delivered on time,
             on budget, and exceeds expectations.
           </p>
         </div>
@@ -255,7 +255,7 @@ export default function ServicesPage() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/projects">
-                View My Work
+                View Our Work
               </Link>
             </Button>
           </div>

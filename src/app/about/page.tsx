@@ -24,23 +24,23 @@ const stats = [
 const timeline = [
   {
     year: "2024",
-    title: "Senior Full-Stack Developer",
-    description: "Expanded into mobile development and motion design, serving startups and agencies worldwide."
+    title: "AZ Studios Founded",
+    description: "Established AZ Studios to provide comprehensive full-stack development services, focusing on startups and agencies worldwide."
+  },
+  {
+    year: "2023",
+    title: "Team Expansion",
+    description: "Expanded our capabilities with mobile development and motion design expertise to serve a growing client base."
   },
   {
     year: "2022",
-    title: "Full-Stack Developer",
-    description: "Specialized in React and Node.js, building scalable web applications for growing companies."
+    title: "Service Launch",
+    description: "Launched full-service development offerings, specializing in React and Node.js solutions for growing companies."
   },
   {
-    year: "2020",
-    title: "Frontend Developer",
-    description: "Started my journey in web development, focusing on creating beautiful user interfaces."
-  },
-  {
-    year: "2019",
-    title: "Computer Science Graduate",
-    description: "Graduated with a degree in Computer Science, ready to make an impact in tech."
+    year: "2021",
+    title: "Company Formation",
+    description: "Founded the development team with a focus on creating exceptional digital experiences and user interfaces."
   },
 ];
 
@@ -57,37 +57,36 @@ export default function AboutPage() {
             className="space-y-6"
           >
             <h1 className="heading-1">
-              About <span className="gradient-text">Ahmer</span>
+              About <span className="gradient-text">AZ Studios</span>
             </h1>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a passionate full-stack developer with over 5 years of experience 
-                building web applications, mobile apps, and digital experiences that 
-                solve real-world problems and drive business growth.
+                AZ Studios is a leading full-stack development company specializing in
+                modern web applications, mobile apps, and digital experiences that solve
+                real-world problems and drive business growth.
               </p>
               <p>
-                My journey began with a curiosity about how things work on the web. 
-                Today, I help startups validate their ideas and agencies deliver 
-                exceptional projects to their clients through clean code, thoughtful 
-                design, and strategic thinking.
+                Founded with a passion for technology and innovation, we help startups
+                validate their ideas and agencies deliver exceptional projects to their
+                clients through clean code, thoughtful design, and strategic thinking.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the 
-                developer community.
+                Our team is committed to staying at the forefront of technology trends,
+                continuously exploring new frameworks and contributing to the developer
+                community through open-source projects and knowledge sharing.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
                 <Link href="/contact">
-                  Work With Me
+                  Work With Us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/resume.pdf" target="_blank">
-                  Download Resume
-                  <Download className="ml-2 h-4 w-4" />
+                <Link href="/services">
+                  Our Services
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -102,7 +101,7 @@ export default function AboutPage() {
             <div className="relative h-96 w-full rounded-lg overflow-hidden">
               <Image
                 src="/about/ahmer-profile.jpg"
-                alt="Ahmer Zulfiqar - Full-Stack Developer"
+                alt="AZ Studios - Professional Development Team"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -139,7 +138,7 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <h2 className="heading-2 mb-4">Skills & Technologies</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            I work with modern technologies to build scalable, maintainable, 
+            We work with modern technologies to build scalable, maintainable,
             and performant applications.
           </p>
         </div>
@@ -163,9 +162,9 @@ export default function AboutPage() {
       {/* Timeline */}
       <Section className="bg-muted/30">
         <div className="text-center mb-12">
-          <h2 className="heading-2 mb-4">My Journey</h2>
+          <h2 className="heading-2 mb-4">Our Story</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            A brief look at my professional journey and key milestones.
+            A brief look at our company journey and key milestones.
           </p>
         </div>
 
@@ -198,9 +197,9 @@ export default function AboutPage() {
       {/* Approach */}
       <Section>
         <div className="text-center mb-12">
-          <h2 className="heading-2 mb-4">My Approach</h2>
+          <h2 className="heading-2 mb-4">Our Approach</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            I believe great software comes from understanding both the technical 
+            We believe great software comes from understanding both the technical
             requirements and the human needs behind them.
           </p>
         </div>
@@ -242,7 +241,7 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="heading-2">Let's Work Together</h2>
             <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-              Ready to bring your vision to life? I'd love to hear about your 
+              Ready to bring your vision to life? We'd love to hear about your
               project and explore how we can create something amazing together.
             </p>
           </div>
@@ -256,7 +255,7 @@ export default function AboutPage() {
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/projects">
-                View My Work
+                View Our Work
               </Link>
             </Button>
           </div>

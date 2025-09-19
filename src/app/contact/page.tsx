@@ -35,19 +35,19 @@ const contactInfo = [
 const faqs = [
   {
     question: "What's your typical project timeline?",
-    answer: "Project timelines vary based on complexity, but most web applications take 4-12 weeks. I'll provide a detailed timeline during our initial consultation."
+    answer: "Project timelines vary based on complexity, but most web applications take 4-12 weeks. We'll provide a detailed timeline during our initial consultation."
   },
   {
     question: "Do you work with international clients?",
-    answer: "Absolutely! I work with clients worldwide and am comfortable with remote collaboration across different time zones."
+    answer: "Absolutely! We work with clients worldwide and are comfortable with remote collaboration across different time zones."
   },
   {
     question: "What's included in your development services?",
-    answer: "I provide end-to-end development including planning, design, development, testing, deployment, and post-launch support."
+    answer: "We provide end-to-end development including planning, design, development, testing, deployment, and post-launch support."
   },
   {
     question: "Can you work with my existing team?",
-    answer: "Yes, I frequently collaborate with existing teams and can integrate seamlessly with your development workflow."
+    answer: "Yes, we frequently collaborate with existing teams and can integrate seamlessly with your development workflow."
   }
 ];
 
@@ -71,7 +71,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="body-large max-w-3xl mx-auto"
           >
-            Ready to turn your vision into reality? I'm here to help you build 
+            Ready to turn your vision into reality? We're here to help you build
             exceptional digital experiences that drive results and delight users.
           </motion.p>
         </div>
@@ -96,8 +96,8 @@ export default function ContactPage() {
             <div>
               <h2 className="heading-3 mb-6">Get in Touch</h2>
               <p className="text-muted-foreground mb-8">
-                Have questions about your project? Want to discuss requirements 
-                or get a quote? I'm here to help and respond quickly.
+                Have questions about your project? Want to discuss requirements
+                or get a quote? We're here to help and respond quickly.
               </p>
               
               <div className="space-y-6">
@@ -163,7 +163,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h2 className="heading-2 mb-4">Frequently Asked Questions</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto">
-            Common questions about working together and my development process.
+            Common questions about working together and our development process.
           </p>
         </div>
 

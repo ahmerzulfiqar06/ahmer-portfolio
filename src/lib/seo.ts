@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import { Project } from "@/types";
 
 const siteConfig = {
-  name: "Ahmer Zulfiqar",
-  title: "Ahmer Zulfiqar - Full-Stack Developer & Software Engineer",
-  description: "Full-stack developer specializing in modern web applications, mobile apps, and motion design. I build production-ready solutions for startups and agencies using Next.js, React Native, and cutting-edge technologies.",
+  name: "AZ Studios",
+  title: "AZ Studios - Full-Stack Development & Software Engineering",
+  description: "We specialize in modern web applications, mobile apps, and motion design. We build production-ready solutions for startups and agencies using Next.js, React Native, and cutting-edge technologies.",
   url: "https://ahmerzulfiqar.dev",
   ogImage: "https://ahmerzulfiqar.dev/og-image.jpg",
   author: {
-    name: "Ahmer Zulfiqar",
+    name: "AZ Studios",
     email: "hello@ahmerzulfiqar.dev",
     twitter: "@ahmerzulfiqar",
     github: "https://github.com/ahmerzulfiqar",
@@ -38,8 +38,8 @@ export function generateMetadata({
     title: metaTitle,
     description: metaDescription,
     keywords: [
-      "full-stack developer",
-      "software engineer",
+      "full-stack development",
+      "software engineering",
       "web development",
       "mobile apps",
       "Next.js",
@@ -49,6 +49,8 @@ export function generateMetadata({
       "React Native",
       "startup development",
       "agency development",
+      "software company",
+      "digital agency",
     ],
     authors: [{ name: siteConfig.author.name, url: siteConfig.url }],
     creator: siteConfig.author.name,
@@ -108,21 +110,49 @@ export function generateProjectMetadata(project: Project): Metadata {
 export function generateJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": "Organization",
     name: siteConfig.author.name,
     email: siteConfig.author.email,
     url: siteConfig.url,
-    jobTitle: "Full-Stack Developer",
     description: siteConfig.description,
     image: siteConfig.ogImage,
+    foundingDate: "2023",
+    industry: "Software Development",
+    serviceArea: "Global",
     sameAs: [
       siteConfig.author.github,
       siteConfig.author.linkedin,
       `https://twitter.com/${siteConfig.author.twitter.replace("@", "")}`,
     ],
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Development Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Full-Stack Web Development",
+            description: "Modern web applications using Next.js, React, and TypeScript"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Mobile App Development",
+            description: "Cross-platform mobile applications using React Native"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Motion Design",
+            description: "Interactive animations and user experience design"
+          }
+        }
+      ]
     },
     knowsAbout: [
       "JavaScript",
@@ -136,6 +166,8 @@ export function generateJsonLd() {
       "Full-Stack Development",
       "Mobile Development",
       "Web Development",
+      "Software Engineering",
+      "Digital Agency",
     ],
   };
 }
@@ -148,7 +180,7 @@ export function generateProjectJsonLd(project: Project) {
     description: project.summary,
     url: `${siteConfig.url}/projects/${project.slug}`,
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: siteConfig.author.name,
       url: siteConfig.url,
     },

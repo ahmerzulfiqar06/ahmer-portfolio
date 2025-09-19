@@ -41,11 +41,11 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <span className="font-bold text-xl gradient-text">
-                Ahmer Zulfiqar
+                AZ Studios
               </span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
-              Full-stack developer crafting exceptional digital experiences for
+              Full-stack development company crafting exceptional digital experiences for
               startups and agencies worldwide.
             </p>
             <div className="flex space-x-2">
@@ -105,9 +105,9 @@ export function Footer() {
                 </Link>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <Link href="/resume.pdf" target="_blank">
+                <Link href="/services">
                   <Download className="mr-2 h-4 w-4" />
-                  Download Resume
+                  View Services
                 </Link>
               </Button>
             </div>
@@ -117,7 +117,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Ahmer Zulfiqar. All rights reserved.
+            © {new Date().getFullYear()} AZ Studios. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <Link

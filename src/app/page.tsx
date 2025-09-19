@@ -93,7 +93,7 @@ export default function HomePage() {
                 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
               >
                 <span className="block leading-tight">
-                  Full-Stack Engineer
+                  Full-Stack Development
                 </span>
                 <motion.span
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -111,7 +111,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="text-lg md:text-xl max-w-2xl text-muted-foreground/80 leading-relaxed"
               >
-                Transforming ideas into scalable applications with modern technologies
+                We transform ideas into scalable applications with modern technologies
                 and exceptional user experiences.
               </motion.p>
             </div>
@@ -149,7 +149,7 @@ export default function HomePage() {
                   asChild
                 >
                   <Link href="/projects">
-                    View My Work
+                    View Our Work
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -210,10 +210,10 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="heading-2 mb-6">
-              What I Do <span className="text-primary">Best</span>
+              What We Do <span className="text-primary">Best</span>
             </h2>
             <p className="body-large max-w-3xl mx-auto text-muted-foreground/90">
-              I specialize in creating cutting-edge digital solutions that transform 
+              We specialize in creating cutting-edge digital solutions that transform
               ideas into reality and drive measurable business results.
             </p>
           </motion.div>
@@ -307,7 +307,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="heading-2 mb-4">Featured Work</h2>
           <p className="body-large max-w-2xl mx-auto">
-            A selection of recent projects that showcase my expertise in 
+            A selection of recent projects that showcase our expertise in
             full-stack development and problem-solving.
           </p>
 
@@ -338,7 +338,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="heading-2 mb-4">Tech Stack</h2>
           <p className="body-large max-w-2xl mx-auto">
-            I work with modern technologies to build scalable, maintainable, 
+            We work with modern technologies to build scalable, maintainable,
             and performant applications.
           </p>
         </div>
@@ -364,8 +364,8 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="heading-2 mb-4">Client Testimonials</h2>
           <p className="body-large max-w-2xl mx-auto">
-            Don't just take my word for it. Here's what clients say about 
-            working with me.
+            Don't just take our word for it. Here's what clients say about
+            working with us.
           </p>
         </div>
 
@@ -386,7 +386,7 @@ export default function HomePage() {
           <div className="space-y-4">
             <h2 className="heading-2">Ready to Start Your Project?</h2>
             <p className="body-large max-w-2xl mx-auto">
-              Let's discuss your vision and turn it into a reality. I'm here 
+              Let's discuss your vision and turn it into a reality. We're here
               to help you build something amazing.
             </p>
           </div>
@@ -394,14 +394,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/contact">
-                Book a Call
+                Get in Touch
                 <ExternalLink className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/resume.pdf" target="_blank">
-                Download Resume
-                <Download className="ml-2 h-4 w-4" />
+              <Link href="/services">
+                View Services
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

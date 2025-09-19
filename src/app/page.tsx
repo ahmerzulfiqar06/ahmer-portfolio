@@ -15,8 +15,14 @@ import { testimonials } from "@/data/testimonials";
 import { HeroAnimation } from "@/components/hero-animation";
 
 const techStack = [
-  "Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", 
-  "React Native", "AWS", "Tailwind CSS", "Framer Motion", "Prisma"
+  // Frontend & Mobile
+  "React", "Next.js", "TypeScript", "React Native", "Flutter", "Tailwind CSS", "Framer Motion",
+  // Backend & Languages
+  "Node.js", "Python", "Django", "FastAPI", "Express.js",
+  // Databases & Cloud
+  "PostgreSQL", "MongoDB", "Firebase", "AWS", "Vercel", "Docker",
+  // Tools & Others
+  "Prisma", "GraphQL", "REST APIs", "Git", "Figma"
 ];
 
 const services = [
@@ -380,12 +386,20 @@ export default function HomePage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
-                    className="text-4xl lg:text-5xl font-bold leading-tight"
+                    className="text-3xl lg:text-4xl font-black leading-tight tracking-tight"
+                    style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}
                   >
-                    <span className="text-foreground">WEBSITES STARTING AT</span>{" "}
-                    <span className="gradient-text">$0 DOWN</span>{" "}
-                    <span className="text-foreground">AND</span>{" "}
-                    <span className="gradient-text">$150 PER MONTH</span>
+                    <div className="text-foreground font-extrabold">WEBSITES & MOBILE APPS</div>
+                    <div className="text-foreground font-extrabold">STARTING AT</div>
+                    <div className="mt-2">
+                      <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
+                        $0 DOWN
+                      </span>{" "}
+                      <span className="text-foreground font-extrabold">AND</span>{" "}
+                      <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent font-black">
+                        $150/MONTH
+                      </span>
+                    </div>
                   </motion.h2>
 
                   <motion.p
@@ -394,10 +408,10 @@ export default function HomePage() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="text-muted-foreground leading-relaxed text-lg"
                   >
-                    We offer $0 down for a standard 5-page professional business website. If you need more than 
-                    that, we provide custom pricing based on scope of work, additional features, and complexity. 
-                    12-month minimum contract includes design, development, hosting, unlimited edits, 24/7 support, 
-                    and lifetime updates.
+                    We offer $0 down for professional websites and mobile applications. From standard 5-page business 
+                    websites to complex mobile apps with custom backends - we provide flexible pricing based on your 
+                    project scope. Our packages include design, development, deployment, hosting, unlimited revisions, 
+                    24/7 support, and lifetime updates.
                   </motion.p>
                 </div>
 
@@ -412,32 +426,32 @@ export default function HomePage() {
                     {
                       icon: "🔒",
                       title: "100% SECURE",
-                      description: "Our sites use enterprise-grade security, SSL certificates, and best practices to keep your data safe."
+                      description: "Enterprise-grade security for websites and mobile apps with SSL certificates and best practices."
                     },
                     {
                       icon: "🎨",
                       title: "CUSTOM DESIGNED",
-                      description: "Every design is crafted by our in-house design team to perfectly match your brand and vision."
+                      description: "Unique designs for web and mobile platforms crafted to match your brand perfectly."
                     },
                     {
                       icon: "⚡",
                       title: "LIGHTNING FAST",
-                      description: "Optimized for speed with perfect 100/100 PageSpeed scores and blazing-fast load times."
+                      description: "Optimized websites and native mobile apps with perfect performance scores and instant loading."
                     },
                     {
                       icon: "💰",
                       title: "MONEY BACK GUARANTEE",
-                      description: "If we can't deliver what you need, you get your money back. We stand behind our work."
+                      description: "Risk-free development for both web and mobile projects. We deliver or you don't pay."
                     },
                     {
-                      icon: "🚀",
-                      title: "UNLIMITED SUPPORT",
-                      description: "Real support from real developers. When you call, you get the owner and lead developer."
+                      icon: "📱",
+                      title: "CROSS-PLATFORM APPS",
+                      description: "Flutter & React Native apps that work seamlessly on iOS and Android from a single codebase."
                     },
                     {
                       icon: "📈",
-                      title: "SEO OPTIMIZED",
-                      description: "Built with SEO best practices from day one. We know what works and how to get you ranking."
+                      title: "FULL-STACK SOLUTIONS",
+                      description: "Complete web and mobile solutions with custom backends, APIs, and database architecture."
                     }
                   ].map((feature, index) => (
                     <motion.div
@@ -515,27 +529,152 @@ export default function HomePage() {
 
       {/* Tech Stack */}
       <Section>
-        <div className="text-center mb-12">
-          <h2 className="heading-2 mb-4">Tech Stack</h2>
-          <p className="body-large max-w-2xl mx-auto">
-            We work with modern technologies to build scalable, maintainable,
-            and performant applications.
-          </p>
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20">
+              TECHNOLOGIES WE MASTER
+            </Badge>
+            <h2 className="heading-2 mb-6">Cutting-Edge Tech Stack</h2>
+            <p className="body-large max-w-3xl mx-auto text-muted-foreground">
+              From modern web frameworks to cross-platform mobile development, we leverage 
+              the latest technologies to build scalable, maintainable, and high-performance 
+              applications that drive business growth.
+            </p>
+          </motion.div>
         </div>
 
-        <div className="flex flex-wrap gap-3 justify-center">
-          {techStack.map((tech, index) => (
-            <motion.div
-              key={tech}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-            >
-              <Badge variant="secondary" className="text-sm py-2 px-4">
-                {tech}
-              </Badge>
-            </motion.div>
-          ))}
+        {/* Categorized Tech Stack */}
+        <div className="space-y-12">
+          {/* Frontend & Mobile */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-semibold mb-6 text-foreground">Frontend & Mobile Development</h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["React", "Next.js", "TypeScript", "React Native", "Flutter", "Tailwind CSS", "Framer Motion"].map((tech, index) => (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }}
+                >
+                  <Badge 
+                    variant="secondary" 
+                    className="text-sm py-3 px-5 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border-blue-200 dark:border-blue-800 hover:scale-105 transition-transform cursor-default"
+                  >
+                    {tech}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Backend & Languages */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-semibold mb-6 text-foreground">Backend & Programming Languages</h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["Node.js", "Python", "Django", "FastAPI", "Express.js"].map((tech, index) => (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
+                >
+                  <Badge 
+                    variant="secondary" 
+                    className="text-sm py-3 px-5 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-950/30 dark:to-teal-950/30 border-green-200 dark:border-green-800 hover:scale-105 transition-transform cursor-default"
+                  >
+                    {tech}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Databases & Cloud */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-semibold mb-6 text-foreground">Databases & Cloud Infrastructure</h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["PostgreSQL", "MongoDB", "Firebase", "AWS", "Vercel", "Docker"].map((tech, index) => (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
+                >
+                  <Badge 
+                    variant="secondary" 
+                    className="text-sm py-3 px-5 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-950/30 dark:to-red-950/30 border-orange-200 dark:border-orange-800 hover:scale-105 transition-transform cursor-default"
+                  >
+                    {tech}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Tools & Others */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="text-center"
+          >
+            <h3 className="text-xl font-semibold mb-6 text-foreground">Development Tools & APIs</h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {["Prisma", "GraphQL", "REST APIs", "Git", "Figma"].map((tech, index) => (
+                <motion.div
+                  key={tech}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.9 + index * 0.05 }}
+                >
+                  <Badge 
+                    variant="secondary" 
+                    className="text-sm py-3 px-5 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border-purple-200 dark:border-purple-800 hover:scale-105 transition-transform cursor-default"
+                  >
+                    {tech}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="text-center mt-16"
+        >
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Need a technology not listed here? We're always learning and adapting to new tools 
+            that can deliver better results for your project.
+          </p>
+          <Button variant="outline" size="lg" asChild>
+            <Link href="/services">
+              Explore Our Services
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Section>
 
